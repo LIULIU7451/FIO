@@ -1,0 +1,42 @@
+===== Linux 系統硬件/軟件資訊 =====
+CPU 型號      : AMD EPYC 9454P 48-Core Processor
+AMD EPYC 9454P 48-Core Processor                Unknown CPU @ 2.7GHz
+物理核數      : 48
+邏輯核數      : 96
+操作系統版本  : Ubuntu 24.04.2 LTS
+內核版本      : 6.8.0-100-generic
+內存大小 (GiB): 1511.17 GiB
+====================================
+root@dsksa316:/mnt/lzh/FIO# vi server.log
+root@dsksa316:/mnt/lzh/FIO# vi server.log
+root@dsksa316:/mnt/lzh/FIO# vi server.log
+root@dsksa316:/mnt/lzh/FIO# git add .
+root@dsksa316:/mnt/lzh/FIO# vi server.log
+物理核數      : 48
+邏輯核數      : 96
+操作系統版本  : Ubuntu 24.04.2 LTS
+內核版本      : 6.8.0-100-generic
+內存大小 (GiB): 1511.17 GiB
+====================================
+===== Linux 系統硬件/軟件資訊 =====
+CPU 型號      : AMD EPYC 9454P 48-Core Processor
+AMD EPYC 9454P 48-Core Processor                Unknown CPU @ 2.7GHz
+物理核數      : 48
+邏輯核數      : 96
+操作系統版本  : Ubuntu 24.04.2 LTS
+內核版本      : 6.8.0-88-generic
+內存大小 (GiB): 1511.54 GiB
+====================================
+===== Linux 系統硬件/軟件資訊 =====
+CPU 型號      : AMD EPYC 9454P 48-Core Processor
+AMD EPYC 9454P 48-Core Processor                Unknown CPU @ 2.7GHz
+物理核數      : 48
+邏輯核數      : 96
+操作系統版本  : Ubuntu 24.04.2 LTS
+內核版本      : 6.8.0-101-generic
+內存大小 (GiB): 1511.56 GiB
+====================================
+
+OPPA4B5Q
+/dev/nvme1n1          /dev/ng1n1            S79LNC0X100845       SAMSUNG MZ3LO15THBLA-00A07               0x1        117.62  GB /  15.36  TB    512   B +  0 B   OPPA4B5Q
+
