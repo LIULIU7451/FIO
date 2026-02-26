@@ -1,0 +1,3 @@
+Failed to write to /dev/nvme-fabrics: Connection reset by peer
+could not add new controller: failed to write to nvme-fabrics device
+
