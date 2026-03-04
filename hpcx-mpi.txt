@@ -1,0 +1,12 @@
+wget https://content.mellanox.com/hpc/hpc-x/v2.25.1_cuda13/hpcx-v2.25.1-gcc-doca_ofed-ubuntu24.04-cuda13-x86_64.tbz
+apt-get install -y lbzip2
+tar -xvf hpcx-v2.18.1-gcc-mlnx_ofed-ubuntu22.04-cuda12-x86_64.tbz -C /opt/
+export HPCX_HOME=$PWD
+source $HPCX_HOME/hpcx-init.sh
+hpcx_load
+env | grep HPCX
+mpicc $HPCX_MPI_TESTS_DIR/examples/hello_c.c -o $HPCX_MPI_TESTS_DIR/examples/hello_c
+mpirun -np 2 $HPCX_MPI_TESTS_DIR/examples/hello_c
+oshcc $HPCX_MPI_TESTS_DIR/examples/hello_oshmem_c.c -o $HPCX_MPI_TESTS_DIR/examples/hello_oshmem_c
+oshrun -np 2 $HPCX_MPI_TESTS_DIR/examples/hello_oshmem_c
+hpcx_unload
