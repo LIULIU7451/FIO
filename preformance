@@ -28,3 +28,10 @@ $ lscpu | grep -E "Thread|Core"
 
 4. install DOCA + HPCX
 5. add NFSD_IO_DIRECT option
+
+
+# 方式 1：/proc/config.gz（多数发行版默认提供）  
+zcat /proc/config.gz | grep CONFIG_NFSD_IO_DIRECT
+
+# 方式 2：/boot/config-$(uname -r)  
+grep CONFIG_NFSD_IO_DIRECT /boot/config-$(uname -r)
