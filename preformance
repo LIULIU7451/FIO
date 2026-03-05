@@ -1,0 +1,30 @@
+And for the sake of performance, I recommend the below 5 tasks
+(It may already be set up)
+
+1. iommu disable
+GRUB_CMDLINE_LINUX="amd_iommu=off iommu=off"
+
+2. setting cpu performance
+$ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+# performance setting
+$ echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+
+# check
+$ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+
+3. disable hyper threading
+$ lscpu | grep -E "Thread|Core"
+
+$ vi /etc/default/grub
+GRUB_CMDLINE_LINUX="amd_iommu=off iommu=off nosmt"
+
+$ update-grub
+$ reboot now
+
+# check
+$ lscpu | grep -E "Thread|Core"
+
+4. install DOCA + HPCX
+5. add NFSD_IO_DIRECT option
