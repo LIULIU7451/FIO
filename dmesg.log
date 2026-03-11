@@ -1,0 +1,5 @@
+[19562.069900] nvme nvme8: creating 48 I/O queues.
+[19571.412607] nvme nvme8: mapped 48/0/0 default/read/poll queues.
+[19571.414561] nvme nvme8: Connect command failed, errno: -18
+[19571.415498] nvme nvme8: failed to connect queue: 4 ret=-18
+
