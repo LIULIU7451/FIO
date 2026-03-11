@@ -1,0 +1,108 @@
+[ 3662.458354] pNFS: using block device nvme8n1
+[53999.939940] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[54000.365950] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+[54000.539954] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+[54002.041990] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 32 times, consider switching to WQ_UNBOUND
+[54004.607052] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 64 times, consider switching to WQ_UNBOUND
+[54007.187163] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[54007.187187] #PF: supervisor read access in kernel mode
+[54007.187198] #PF: error_code(0x0000) - not-present page
+[54007.187208] PGD 5f10d88067 P4D 0
+[54007.187218] Oops: 0000 [#1] PREEMPT SMP NOPTI
+[54007.187229] CPU: 27 PID: 3430 Comm: kworker/u193:1 Not tainted 6.8.0-101-generic #101-Ubuntu
+[54007.187243] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[54007.187254] Workqueue: writeback wb_workfn (flush-0:53)
+[54007.187270] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[54007.187289] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d 3e e4 f2 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[54007.187312] RSP: 0018:ff6480415fc57a38 EFLAGS: 00010202
+[54007.187322] RAX: 0000000000000000 RBX: ff6480418bad1000 RCX: 0000000000000000
+[54007.187332] RDX: 0000000000000100 RSI: ff1adf956e0c7800 RDI: 0000000000000000
+[54007.187343] RBP: ff6480415fc57a78 R08: 0000000000000000 R09: 0000000000000000
+[54007.187354] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[54007.187365] R13: ff1adff3d6a37de0 R14: 00000000ffffffe4 R15: 00000000000121b1
+[54007.187376] FS:  0000000000000000(0000) GS:ff1ae077bf980000(0000) knlGS:0000000000000000
+[54007.187388] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[54007.187398] CR2: 0000000000000008 CR3: 0000005f0c6ca001 CR4: 0000000000f71ef0
+[54007.187411] PKRU: 55555554
+[54007.187417] Call Trace:
+[54007.187425]  <TASK>
+[54007.187434]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[54007.187447]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[54007.187485]  nfs4_write_inode+0x3c/0x50 [nfsv4]
+[54007.187513]  write_inode+0x59/0x100
+[54007.187524]  __writeback_single_inode+0x14d/0x290
+[54007.187534]  ? srso_alias_return_thunk+0x5/0xfbef5
+[54007.187547]  writeback_sb_inodes+0x21b/0x520
+[54007.187560]  __writeback_inodes_wb+0x54/0x100
+[54007.187570]  ? queue_io+0x115/0x120
+[54007.187579]  wb_writeback+0x2df/0x350
+[54007.187591]  wb_do_writeback+0x1f1/0x2a0
+[54007.187602]  wb_workfn+0x5f/0x240
+[54007.187610]  ? finish_task_switch.isra.0+0x93/0x300
+[54007.187622]  ? srso_alias_return_thunk+0x5/0xfbef5
+[54007.187631]  ? __schedule+0x284/0x6b0
+[54007.187642]  process_one_work+0x181/0x3a0
+[54007.187653]  worker_thread+0x306/0x440
+[54007.187663]  ? __pfx_worker_thread+0x10/0x10
+[54007.187672]  kthread+0xef/0x120
+[54007.187682]  ? __pfx_kthread+0x10/0x10
+[54007.187692]  ret_from_fork+0x44/0x70
+[54007.187900]  ? __pfx_kthread+0x10/0x10
+[54007.188095]  ret_from_fork_asm+0x1b/0x30
+[54007.188292]  </TASK>
+[54007.188478] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem amd64_edac cxl_acpi cxl_port edac_mce_amd rapl cxl_core binfmt_misc ipmi_ssif rdma_cm ib_ipoib iw_cm nls_iso8859_1 ib_cm ast acpi_ipmi i2c_algo_bit ipmi_si ipmi_devintf k10temp ccp i2c_piix4 ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd auth_rpcgss dm_multipath nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core hid_generic rndis_host usbhid cdc_ether mlx5_core usbnet hid mii mlxfw crct10dif_pclmul crc32_pclmul polyval_clmulni polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 raid0 psample nvme ixgbe tls xfrm_algo ahci nvme_core pci_hyperv_intf xhci_pci dca libahci
+[54007.188574]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[54007.190656] CR2: 0000000000000008
+[54007.190866] ---[ end trace 0000000000000000 ]---
+[54007.347921] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[54007.348233] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d 3e e4 f2 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[54007.348707] RSP: 0018:ff6480415fc57a38 EFLAGS: 00010202
+[54007.348946] RAX: 0000000000000000 RBX: ff6480418bad1000 RCX: 0000000000000000
+[54007.349187] RDX: 0000000000000100 RSI: ff1adf956e0c7800 RDI: 0000000000000000
+[54007.349426] RBP: ff6480415fc57a78 R08: 0000000000000000 R09: 0000000000000000
+[54007.349662] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[54007.349898] R13: ff1adff3d6a37de0 R14: 00000000ffffffe4 R15: 00000000000121b1
+[54007.350131] FS:  0000000000000000(0000) GS:ff1ae077bf980000(0000) knlGS:0000000000000000
+[54007.350369] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[54007.350609] CR2: 0000000000000008 CR3: 0000005f0c6ca001 CR4: 0000000000f71ef0
+[54007.350851] PKRU: 55555554
+[54007.351089] note: kworker/u193:1[3430] exited with irqs disabled
+[54007.351379] ------------[ cut here ]------------
+[54007.351624] WARNING: CPU: 27 PID: 3430 at kernel/exit.c:821 do_exit+0x4df/0x530
+[54007.351874] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem amd64_edac cxl_acpi cxl_port edac_mce_amd rapl cxl_core binfmt_misc ipmi_ssif rdma_cm ib_ipoib iw_cm nls_iso8859_1 ib_cm ast acpi_ipmi i2c_algo_bit ipmi_si ipmi_devintf k10temp ccp i2c_piix4 ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd auth_rpcgss dm_multipath nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core hid_generic rndis_host usbhid cdc_ether mlx5_core usbnet hid mii mlxfw crct10dif_pclmul crc32_pclmul polyval_clmulni polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 raid0 psample nvme ixgbe tls xfrm_algo ahci nvme_core pci_hyperv_intf xhci_pci dca libahci
+[54007.351969]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[54007.354720] CPU: 27 PID: 3430 Comm: kworker/u193:1 Tainted: G      D            6.8.0-101-generic #101-Ubuntu
+[54007.355022] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[54007.355328] Workqueue: writeback wb_workfn (flush-0:53)
+[54007.355633] RIP: 0010:do_exit+0x4df/0x530
+[54007.355936] Code: 17 93 2c 00 e9 a6 fe ff ff 49 8d 7c 24 18 e8 68 19 08 00 e9 2b fc ff ff 4c 89 ee bf 05 06 00 00 e8 96 41 01 00 e9 6a fc ff ff <0f> 0b e9 98 fb ff ff 0f 0b e9 51 fb ff ff 48 8b b8 88 0e 00 00 e8
+[54007.356579] RSP: 0018:ff6480415fc57ee8 EFLAGS: 00010286
+[54007.356907] RAX: 0000000000000000 RBX: ff1adf955bc7af40 RCX: 0000000000000000
+[54007.357241] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[54007.357572] RBP: ff6480415fc57f28 R08: 0000000000000000 R09: 0000000000000000
+[54007.357896] R10: 0000000000000000 R11: 0000000000000000 R12: ff1adf9557fb8900
+[54007.358222] R13: 0000000000000009 R14: ff1adf9557fb4a40 R15: 0000000000000000
+[54007.358539] FS:  0000000000000000(0000) GS:ff1ae077bf980000(0000) knlGS:0000000000000000
+[54007.358853] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[54007.359167] CR2: 0000000000000008 CR3: 0000005f0c6ca001 CR4: 0000000000f71ef0
+[54007.359474] PKRU: 55555554
+[54007.359774] Call Trace:
+[54007.360068]  <TASK>
+[54007.360363]  make_task_dead+0x80/0x140
+[54007.360649]  rewind_stack_and_make_dead+0x17/0x20
+[54007.360936]  </TASK>
+[54007.361220] ---[ end trace 0000000000000000 ]---
+[54007.637121] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 128 times, consider switching to WQ_UNBOUND
+[54012.531234] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 256 times, consider switching to WQ_UNBOUND
+[54013.859265] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 512 times, consider switching to WQ_UNBOUND
+[54016.392323] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 1024 times, consider switching to WQ_UNBOUND
+[54020.916427] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 2048 times, consider switching to WQ_UNBOUND
+[54029.238615] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 4096 times, consider switching to WQ_UNBOUND
+[54046.920008] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 8192 times, consider switching to WQ_UNBOUND
+[54087.505862] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 16384 times, consider switching to WQ_UNBOUND
+[54195.778876] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 32768 times, consider switching to WQ_UNBOUND
+[54526.172230] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 65536 times, consider switching to WQ_UNBOUND
+[55522.275133] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 131072 times, consider switching to WQ_UNBOUND
+[58809.159886] workqueue: bl_write_cleanup [blocklayoutdriver] hogged CPU for >10000us 262144 times, consider switching to WQ_UNBOUND
+root@dsksa315:~#
+
