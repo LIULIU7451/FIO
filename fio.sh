@@ -1,2 +1,4 @@
 fio --name=seq_write_test --directory=/mnt/nfs --ioengine=libaio --direct=1 --rw=write --norandommap --randrepeat=0 --bs=128k --iodepth=32 --numjobs=1 --size=1G --loops=1 --runtime=120 --overwrite=1 --time_based --group_reporting
 fio --name=seq_read_test --directory=/mnt/nfs --ioengine=libaio --direct=1 --rw=read --bs=128k --iodepth=32 --numjobs=1 --size=1G --loops=1 --runtime=120 --overwrite=1 --time_based --group_reporting
+fio --name=seq_write_test --directory=/mnt/nfs --ioengine=libaio --direct=1 --rw=randwrite --norandommap --randrepeat=0 --bs=4k --iodepth=32 --numjobs=16 --size=1G --loops=1 --runtime=120 --overwrite=1 --time_based --group_reporting
+fio --name=seq_read_test --directory=/mnt/nfs --ioengine=libaio --direct=1 --rw=randread --bs=4k --iodepth=32 --numjobs=16 --size=1G --loops=1 --runtime=120 --overwrite=1 --time_based --group_reporting
