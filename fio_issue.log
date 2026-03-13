@@ -1,0 +1,38 @@
+root@dsksa315:/mnt/lzh/FIO/SMRC_FIO# fio --name=rand_write_test --directory=/mnt/nfs --ioengine=libaio --direct=1 --rw=randwrite --norandommap --randrepeat=0  --refill_buffers=1 --bs=4k --iodepth=64 --numjobs=16 --size=10G --runtime=60 --time_based --group_reporting
+rand_write_test: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=64
+...
+fio-3.36
+Starting 16 processes
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+rand_write_test: Laying out IO file (1 file / 10240MiB)
+fio: pid=13734, got signal=9.0%][w=1211MiB/s][w=310k IOPS][eta 00m:00s]
+fio: pid=13735, got signal=9
+fio: pid=13736, got signal=9
+fio: pid=13737, got signal=9
+fio: pid=13738, got signal=9
+fio: pid=13739, got signal=9
+fio: pid=13740, got signal=9
+fio: pid=13741, got signal=9
+fio: pid=13743, got signal=9
+fio: pid=13744, got signal=9
+fio: pid=13745, got signal=9
+fio: pid=13747, got signal=9
+fio: pid=13748, got signal=9
+fio: pid=13749, got signal=9
+fio: pid=13746, got signal=9
+Killed1 (f=1): [K(8),f(1),K(7)][100.0%][eta 00m:00s]
+

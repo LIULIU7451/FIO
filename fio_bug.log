@@ -1,0 +1,1273 @@
+[165456.361712] pNFS: using block device nvme8n2
+[165456.361957] pNFS: using block device nvme8n2
+[165456.362114] pNFS: using block device nvme8n2
+[165456.362271] pNFS: using block device nvme8n2
+[165456.362434] pNFS: using block device nvme8n2
+[165456.362585] pNFS: using block device nvme8n2
+[165456.362737] pNFS: using block device nvme8n2
+[165456.362890] pNFS: using block device nvme8n2
+[165456.363041] pNFS: using block device nvme8n2
+[165456.363197] pNFS: using block device nvme8n2
+[165456.363346] pNFS: using block device nvme8n2
+[165456.363815] pNFS: using block device nvme8n2
+[165456.364034] pNFS: using block device nvme8n2
+[165456.364236] pNFS: using block device nvme8n2
+[165456.364398] pNFS: using block device nvme8n2
+[165456.364549] pNFS: using block device nvme8n2
+[165487.400923] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165487.401156] #PF: supervisor read access in kernel mode
+[165487.401335] #PF: error_code(0x0000) - not-present page
+[165487.401505] PGD 201c117067 P4D 0
+[165487.401670] Oops: 0000 [#49] PREEMPT SMP NOPTI
+[165487.401830] CPU: 4 PID: 11463 Comm: kworker/u193:2 Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165487.401991] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165487.402147] Workqueue: writeback wb_workfn (flush-0:56)
+[165487.402303] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165487.402465] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165487.402798] RSP: 0018:ff8004bad5397a38 EFLAGS: 00010202
+[165487.402972] RAX: 0000000000000000 RBX: ff8004bad7a05000 RCX: 0000000000000000
+[165487.403147] RDX: 0000000000000100 RSI: ff328f4f31a7a800 RDI: 0000000000000000
+[165487.403323] RBP: ff8004bad5397a78 R08: 0000000000000000 R09: 0000000000000000
+[165487.403501] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165487.403678] R13: ff328ef113a299e0 R14: 00000000ffffffe4 R15: 0000000000067df6
+[165487.403857] FS:  0000000000000000(0000) GS:ff328fffbfc00000(0000) knlGS:0000000000000000
+[165487.404040] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165487.404226] CR2: 0000000000000008 CR3: 000000201c154001 CR4: 0000000000f71ef0
+[165487.404413] PKRU: 55555554
+[165487.404597] Call Trace:
+[165487.404784]  <TASK>
+[165487.404970]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165487.405158]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165487.405371]  nfs4_write_inode+0x3c/0x50 [nfsv4]
+[165487.405571]  write_inode+0x59/0x100
+[165487.405751]  __writeback_single_inode+0x14d/0x290
+[165487.405932]  writeback_sb_inodes+0x21b/0x520
+[165487.406110]  ? try_to_wake_up+0x11b/0x640
+[165487.406288]  __writeback_inodes_wb+0x54/0x100
+[165487.406455]  ? queue_io+0x115/0x120
+[165487.406622]  wb_writeback+0x2df/0x350
+[165487.406789]  ? get_nr_inodes+0x56/0xa0
+[165487.406960]  wb_do_writeback+0x225/0x2a0
+[165487.407134]  wb_workfn+0x5f/0x240
+[165487.407306]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165487.407482]  ? wake_up_process+0x15/0x30
+[165487.407658]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165487.407837]  process_one_work+0x181/0x3a0
+[165487.408019]  worker_thread+0x306/0x440
+[165487.408201]  ? __pfx_worker_thread+0x10/0x10
+[165487.408386]  kthread+0xef/0x120
+[165487.408573]  ? __pfx_kthread+0x10/0x10
+[165487.408760]  ret_from_fork+0x44/0x70
+[165487.408948]  ? __pfx_kthread+0x10/0x10
+[165487.409138]  ret_from_fork_asm+0x1b/0x30
+[165487.409332]  </TASK>
+[165487.409518] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165487.409612]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165487.411670] CR2: 0000000000000008
+[165487.411875] ---[ end trace 0000000000000000 ]---
+[165487.430898] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165487.431144] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165487.431603] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165487.431837] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165487.432071] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165487.432302] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165487.432534] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165487.432762] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165487.432994] FS:  0000000000000000(0000) GS:ff328fffbfc00000(0000) knlGS:0000000000000000
+[165487.433230] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165487.433465] CR2: 0000000000000008 CR3: 000000201c154001 CR4: 0000000000f71ef0
+[165487.433702] PKRU: 55555554
+[165487.433936] note: kworker/u193:2[11463] exited with irqs disabled
+[165487.434192] ------------[ cut here ]------------
+[165487.434433] WARNING: CPU: 4 PID: 11463 at kernel/exit.c:821 do_exit+0x4df/0x530
+[165487.434684] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165487.434778]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165487.437482] CPU: 4 PID: 11463 Comm: kworker/u193:2 Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165487.437784] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165487.438081] Workqueue: writeback wb_workfn (flush-0:56)
+[165487.438381] RIP: 0010:do_exit+0x4df/0x530
+[165487.438678] Code: 17 93 2c 00 e9 a6 fe ff ff 49 8d 7c 24 18 e8 68 19 08 00 e9 2b fc ff ff 4c 89 ee bf 05 06 00 00 e8 96 41 01 00 e9 6a fc ff ff <0f> 0b e9 98 fb ff ff 0f 0b e9 51 fb ff ff 48 8b b8 88 0e 00 00 e8
+[165487.439307] RSP: 0018:ff8004bad5397ee8 EFLAGS: 00010286
+[165487.439626] RAX: 0000000000000000 RBX: ff328f0ff1502f40 RCX: 0000000000000000
+[165487.439953] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[165487.440274] RBP: ff8004bad5397f28 R08: 0000000000000000 R09: 0000000000000000
+[165487.440590] R10: 0000000000000000 R11: 0000000000000000 R12: ff328f4ed86e0000
+[165487.440909] R13: 0000000000000009 R14: ff328ef103e339c0 R15: 0000000000000000
+[165487.441218] FS:  0000000000000000(0000) GS:ff328fffbfc00000(0000) knlGS:0000000000000000
+[165487.441526] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165487.441835] CR2: 0000000000000008 CR3: 000000201c154001 CR4: 0000000000f71ef0
+[165487.442136] PKRU: 55555554
+[165487.442428] Call Trace:
+[165487.442715]  <TASK>
+[165487.443001]  make_task_dead+0x80/0x140
+[165487.443283]  rewind_stack_and_make_dead+0x17/0x20
+[165487.443566]  </TASK>
+[165487.443847] ---[ end trace 0000000000000000 ]---
+[165516.644941] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.645297] #PF: supervisor read access in kernel mode
+[165516.645607] #PF: error_code(0x0000) - not-present page
+[165516.645896] PGD 201c072067 P4D 0
+[165516.646174] Oops: 0000 [#50] PREEMPT SMP NOPTI
+[165516.646447] CPU: 45 PID: 13741 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.646707] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.646962] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.647226] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.647756] RSP: 0018:ff8004bad7873d58 EFLAGS: 00010202
+[165516.648026] RAX: 0000000000000000 RBX: ff8004bad7b15000 RCX: 0000000000000000
+[165516.648296] RDX: 0000000000000100 RSI: ff328f8ddc646000 RDI: 0000000000000000
+[165516.648562] RBP: ff8004bad7873d98 R08: 0000000000000000 R09: 0000000000000000
+[165516.648828] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.649092] R13: ff328f8dd35521e0 R14: 00000000ffffffe4 R15: 0000000000096bc3
+[165516.649350] FS:  00007d33053e9ec0(0000) GS:ff3290523f980000(0000) knlGS:0000000000000000
+[165516.649610] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.649861] CR2: 0000000000000008 CR3: 000000201c0ac004 CR4: 0000000000f71ef0
+[165516.650111] PKRU: 55555554
+[165516.650354] Call Trace:
+[165516.650596]  <TASK>
+[165516.650834]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.651068]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.651323]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.651566]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.651806]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.652043]  filp_flush+0x35/0x90
+[165516.652261]  __x64_sys_close+0x34/0x90
+[165516.652480]  x64_sys_call+0x1fec/0x25a0
+[165516.652691]  do_syscall_64+0x7f/0x180
+[165516.652895]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.653096]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.653296]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.653493]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.653692]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.653889]  ? irqentry_exit+0x43/0x50
+[165516.654085]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.654280]  ? exc_page_fault+0x94/0x1b0
+[165516.654473]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.654667] RIP: 0033:0x7d330791674c
+[165516.654877] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.655286] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.655499] RAX: ffffffffffffffda RBX: 00007d3302372e30 RCX: 00007d330791674c
+[165516.655713] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.655928] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.656142] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.656353] R13: 00007d32fb0a6de0 R14: 0000000000000000 R15: 00007d32fb0a6de0
+[165516.656566]  </TASK>
+[165516.656774] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.656869]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.659128] CR2: 0000000000000008
+[165516.659358] ---[ end trace 0000000000000000 ]---
+[165516.659360] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.659985] #PF: supervisor read access in kernel mode
+[165516.660286] #PF: error_code(0x0000) - not-present page
+[165516.660567] PGD 201d7a2067 P4D 0
+[165516.660840] Oops: 0000 [#51] PREEMPT SMP NOPTI
+[165516.661104] CPU: 7 PID: 13734 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.661377] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.661648] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.661913] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.662447] RSP: 0018:ff8004bad764bb70 EFLAGS: 00010202
+[165516.662722] RAX: 0000000000000000 RBX: ff8004bad8620000 RCX: 0000000000000000
+[165516.662993] RDX: 0000000000000100 RSI: ff328f6e5c9c2000 RDI: 0000000000000000
+[165516.663263] RBP: ff8004bad764bbb0 R08: 0000000000000000 R09: 0000000000000000
+[165516.663532] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.663801] R13: ff328f6e535405e0 R14: 00000000ffffffe4 R15: 0000000000093f6f
+[165516.664072] FS:  00007d33053e9ec0(0000) GS:ff329041bf880000(0000) knlGS:0000000000000000
+[165516.664345] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.664728] CR2: 0000000000000008 CR3: 0000001ff0f8c002 CR4: 0000000000f71ef0
+[165516.665002] PKRU: 55555554
+[165516.665270] Call Trace:
+[165516.665537]  <TASK>
+[165516.665807]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.666079]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.666376]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.666662]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.666950]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.667223]  filp_flush+0x35/0x90
+[165516.667470]  __x64_sys_close+0x34/0x90
+[165516.667711]  x64_sys_call+0x1fec/0x25a0
+[165516.667952]  do_syscall_64+0x7f/0x180
+[165516.668191]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.668430]  ? task_numa_fault+0x87/0x3f0
+[165516.668669]  ? migrate_misplaced_folio+0x183/0x1c0
+[165516.668909]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.669145]  ? do_numa_page+0x36a/0x3c0
+[165516.669379]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.669703]  ? handle_pte_fault+0x16e/0x1d0
+[165516.669925]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.670142]  ? __handle_mm_fault+0x654/0x790
+[165516.670356]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.670564]  ? __count_memcg_events+0x6b/0x120
+[165516.670770]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.670973]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.671169]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.671364]  ? handle_mm_fault+0xad/0x380
+[165516.671559]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.671754]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.671952]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.672144]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.672340]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.672531]  ? irqentry_exit+0x43/0x50
+[165516.672720]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.672910]  ? exc_page_fault+0x94/0x1b0
+[165516.673095]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.673280] RIP: 0033:0x7d330791674c
+[165516.673480] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.673843] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.674028] RAX: ffffffffffffffda RBX: 00007d3302372110 RCX: 00007d330791674c
+[165516.674192] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.674302] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.674603] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.674892] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.675430] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.675737] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+
+[165516.676336] R13: 00007d32faf60000 R14: 0000000000000000 R15: 00007d32faf60000
+[165516.676634] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.676950]  </TASK>
+[165516.677246] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.677553] Modules linked in:
+[165516.677859] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.677860]  rpcsec_gss_krb5 blocklayoutdriver
+[165516.678103] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.678417]  nfsv4
+[165516.678727] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.679049]  nfs
+[165516.679359] FS:  00007d33053e9ec0(0000) GS:ff3290523f980000(0000) knlGS:0000000000000000
+[165516.679683]  netfs
+[165516.679994] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.680321]  nvme_rdma
+[165516.680639] CR2: 0000000000000008 CR3: 000000201c0ac004 CR4: 0000000000f71ef0
+[165516.680970]  qrtr
+[165516.681289] PKRU: 55555554
+[165516.681623]  cfg80211
+[165516.681948] note: fio[13741] exited with irqs disabled
+[165516.682280]  rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.685263] CR2: 0000000000000008
+[165516.685549] ---[ end trace 0000000000000000 ]---
+[165516.685551] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.686249] #PF: supervisor read access in kernel mode
+[165516.686570] #PF: error_code(0x0000) - not-present page
+[165516.686875] PGD 201c226067 P4D 0
+[165516.687177] Oops: 0000 [#52] PREEMPT SMP NOPTI
+[165516.687471] CPU: 29 PID: 13747 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.687755] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.688026] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.688303] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.688865] RSP: 0018:ff8004bad78a3d28 EFLAGS: 00010202
+[165516.689146] RAX: 0000000000000000 RBX: ff8004bad7c16000 RCX: 0000000000000000
+[165516.689425] RDX: 0000000000000100 RSI: ff328f4edb43b000 RDI: 0000000000000000
+[165516.689695] RBP: ff8004bad78a3d68 R08: 0000000000000000 R09: 0000000000000000
+[165516.689963] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.690230] R13: ff328f4ed7f8ade0 R14: 00000000ffffffe4 R15: 000000000008c151
+[165516.690494] FS:  00007d33053e9ec0(0000) GS:ff3290313fa80000(0000) knlGS:0000000000000000
+[165516.690759] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.691113] CR2: 0000000000000008 CR3: 000000201c2a8001 CR4: 0000000000f71ef0
+[165516.691378] PKRU: 55555554
+[165516.691639] Call Trace:
+[165516.691896]  <TASK>
+[165516.692156]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.692417]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.692705]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.692972]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.693236]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.693498]  filp_flush+0x35/0x90
+[165516.693740]  __x64_sys_close+0x34/0x90
+[165516.693978]  x64_sys_call+0x1fec/0x25a0
+[165516.694214]  do_syscall_64+0x7f/0x180
+[165516.694448]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.694682]  ? handle_mm_fault+0xad/0x380
+[165516.694913]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.695142]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.695375]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.695608]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.695941]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.696170]  ? irqentry_exit+0x43/0x50
+[165516.696393]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.696611]  ? exc_page_fault+0x94/0x1b0
+[165516.696825]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.697037] RIP: 0033:0x7d330791674c
+[165516.697264] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.697685] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.697897] RAX: ffffffffffffffda RBX: 00007d3302373970 RCX: 00007d330791674c
+[165516.698110] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.698322] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.698532] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.698742] R13: 00007d32fab737a0 R14: 0000000000000000 R15: 00007d32fab737a0
+[165516.698955]  </TASK>
+[165516.699161] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.699256]  xhci_pci_renesas
+[165516.700516] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.701307]  mdio
+[165516.701664] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.702011]  nvme_auth
+[165516.702352] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.702995]  aesni_intel
+
+[165516.703714]  crypto_simd
+[165516.704075] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.704428]  cryptd
+[165516.704781] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+
+[165516.705510] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.705877] CR2: 0000000000000008
+[165516.706242] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.706616] ---[ end trace 0000000000000000 ]---
+[165516.706617] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.706624] #PF: supervisor read access in kernel mode
+[165516.706626] #PF: error_code(0x0000) - not-present page
+[165516.706628] PGD 201c00b067 P4D 0
+[165516.706632] Oops: 0000 [#53] PREEMPT SMP NOPTI
+[165516.706635] CPU: 13 PID: 13739 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.706638] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.706639] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.706648] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.706650] RSP: 0018:ff8004bad7863c58 EFLAGS: 00010202
+[165516.706652] RAX: 0000000000000000 RBX: ff8004bad7e18000 RCX: 0000000000000000
+[165516.706653] RDX: 0000000000000100 RSI: ff328f2f596fc800 RDI: 0000000000000000
+[165516.706654] RBP: ff8004bad7863c98 R08: 0000000000000000 R09: 0000000000000000
+[165516.706656] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.706657] R13: ff328f2f57d569e0 R14: 00000000ffffffe4 R15: 000000000009450f
+[165516.706658] FS:  00007d33053e9ec0(0000) GS:ff329020bf880000(0000) knlGS:0000000000000000
+[165516.706660] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.706661] CR2: 0000000000000008 CR3: 000000201c080005 CR4: 0000000000f71ef0
+[165516.706662] PKRU: 55555554
+[165516.706663] Call Trace:
+[165516.706665]  <TASK>
+[165516.706671]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.706674]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.706703]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.706722]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.706744]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.706765]  filp_flush+0x35/0x90
+[165516.706770]  __x64_sys_close+0x34/0x90
+[165516.706772]  x64_sys_call+0x1fec/0x25a0
+[165516.706776]  do_syscall_64+0x7f/0x180
+[165516.706780]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706783]  ? __handle_mm_fault+0x654/0x790
+[165516.706788]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706790]  ? __count_memcg_events+0x6b/0x120
+[165516.706793]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706795]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.706797]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706799]  ? handle_mm_fault+0xad/0x380
+[165516.706801]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706803]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.706806]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706808]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.706810]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706812]  ? irqentry_exit+0x43/0x50
+[165516.706814]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.706815]  ? exc_page_fault+0x94/0x1b0
+[165516.706817]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.706820] RIP: 0033:0x7d330791674c
+[165516.706846] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.706847] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.706850] RAX: ffffffffffffffda RBX: 00007d3302372a70 RCX: 00007d330791674c
+[165516.706851] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.706852] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.706853] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.706854] R13: 00007d32fb0497a0 R14: 0000000000000000 R15: 00007d32fb0497a0
+[165516.706857]  </TASK>
+[165516.706858] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.706942]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.706949] CR2: 0000000000000008
+[165516.706951] ---[ end trace 0000000000000000 ]---
+[165516.706952] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.706955] #PF: supervisor read access in kernel mode
+[165516.706956] #PF: error_code(0x0000) - not-present page
+[165516.706958] PGD 201bb12067 P4D 0
+[165516.706960] Oops: 0000 [#54] PREEMPT SMP NOPTI
+[165516.706962] CPU: 17 PID: 13737 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.706965] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.706966] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.706971] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.706973] RSP: 0018:ff8004bad7853b40 EFLAGS: 00010202
+[165516.706975] RAX: 0000000000000000 RBX: ff8004bad7d17000 RCX: 0000000000000000
+[165516.706976] RDX: 0000000000000100 RSI: ff328f2f5b7f6000 RDI: 0000000000000000
+[165516.706977] RBP: ff8004bad7853b80 R08: 0000000000000000 R09: 0000000000000000
+[165516.706978] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.706979] R13: ff328f2f57ff99e0 R14: 00000000ffffffe4 R15: 0000000000094ed5
+[165516.706981] FS:  00007d33053e9ec0(0000) GS:ff329020bfa80000(0000) knlGS:0000000000000000
+[165516.706982] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.706984] CR2: 0000000000000008 CR3: 000000201b740004 CR4: 0000000000f71ef0
+[165516.706985] PKRU: 55555554
+[165516.706986] Call Trace:
+[165516.706987]  <TASK>
+[165516.706990]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.706993] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.706994]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.707020]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.707040]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.707060]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.707081]  filp_flush+0x35/0x90
+[165516.707084]  __x64_sys_close+0x34/0x90
+[165516.707086]  x64_sys_call+0x1fec/0x25a0
+[165516.707088]  do_syscall_64+0x7f/0x180
+[165516.707091]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707093]  ? node_is_toptier+0x42/0x60
+[165516.707097]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707098]  ? task_numa_fault+0x87/0x3f0
+[165516.707102]  ? migrate_misplaced_folio+0x183/0x1c0
+[165516.707105]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707107]  ? do_numa_page+0x36a/0x3c0
+[165516.707111]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707112]  ? handle_pte_fault+0x16e/0x1d0
+[165516.707114]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707115]  ? __handle_mm_fault+0x654/0x790
+[165516.707119]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707120]  ? __count_memcg_events+0x6b/0x120
+[165516.707122]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707124]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.707126]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707127]  ? handle_mm_fault+0xad/0x380
+[165516.707129]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707131]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.707133]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707134]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.707136]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707138]  ? irqentry_exit+0x43/0x50
+[165516.707140]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.707141]  ? exc_page_fault+0x94/0x1b0
+[165516.707143]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.707145] RIP: 0033:0x7d330791674c
+[165516.707154] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.707155] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.707158] RAX: ffffffffffffffda RBX: 00007d33023726b0 RCX: 00007d330791674c
+[165516.707159] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.707160] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.707161] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.707162] R13: 00007d32fafec160 R14: 0000000000000000 R15: 00007d32fafec160
+[165516.707165]  </TASK>
+[165516.707166] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.707223]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.707228] CR2: 0000000000000008
+[165516.707230] ---[ end trace 0000000000000000 ]---
+[165516.707231] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.707237] #PF: supervisor read access in kernel mode
+[165516.707240] #PF: error_code(0x0000) - not-present page
+[165516.707242] PGD 2006fb4067 P4D 0
+[165516.707246] Oops: 0000 [#55] PREEMPT SMP NOPTI
+[165516.707250] CPU: 38 PID: 13735 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.707253] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.707255] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.707264] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.707267] RSP: 0018:ff8004bad7843b58 EFLAGS: 00010202
+[165516.707269] RAX: 0000000000000000 RBX: ff8004bad7f19000 RCX: 0000000000000000
+[165516.707271] RDX: 0000000000000100 RSI: ff328f0fdaf2d000 RDI: 0000000000000000
+[165516.707273] RBP: ff8004bad7843b98 R08: 0000000000000000 R09: 0000000000000000
+[165516.707274] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.707276] R13: ff328f0fd35b95e0 R14: 00000000ffffffe4 R15: 0000000000091d2e
+[165516.707277] FS:  00007d33053e9ec0(0000) GS:ff3290103f900000(0000) knlGS:0000000000000000
+[165516.707279] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.707281] CR2: 0000000000000008 CR3: 000000201bb76002 CR4: 0000000000f71ef0
+[165516.707283] PKRU: 55555554
+[165516.707284] Call Trace:
+[165516.707286]  <TASK>
+[165516.707291]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.707295]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.707325]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.707344]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.707367]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.707741] FS:  00007d33053e9ec0(0000) GS:ff329041bf880000(0000) knlGS:0000000000000000
+[165516.708147]  filp_flush+0x35/0x90
+[165516.708530] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.708908]  __x64_sys_close+0x34/0x90
+[165516.709283] CR2: 0000000000000008 CR3: 0000001ff0f8c002 CR4: 0000000000f71ef0
+[165516.709661]  x64_sys_call+0x1fec/0x25a0
+[165516.710052] PKRU: 55555554
+[165516.710447]  do_syscall_64+0x7f/0x180
+[165516.710843] note: fio[13734] exited with irqs disabled
+[165516.711598]  ? node_is_toptier+0x42/0x60
+[165516.726658] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.726854]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.727226] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.727568]  ? task_numa_fault+0x87/0x3f0
+[165516.727918] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.728573]  ? migrate_misplaced_folio+0x183/0x1c0
+
+[165516.729326]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.729700] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.730077]  ? do_numa_page+0x36a/0x3c0
+[165516.730456] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.730839]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.731226] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.731611]  ? handle_pte_fault+0x16e/0x1d0
+[165516.732087] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.732495]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.732886] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.733276]  ? __handle_mm_fault+0x654/0x790
+[165516.733673] FS:  00007d33053e9ec0(0000) GS:ff329020bf880000(0000) knlGS:0000000000000000
+[165516.734077]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.734474] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.734870]  ? __count_memcg_events+0x6b/0x120
+[165516.735251] CR2: 0000000000000008 CR3: 000000201c080005 CR4: 0000000000f71ef0
+[165516.735621]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.735985] PKRU: 55555554
+[165516.736348]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.736711] note: fio[13739] exited with irqs disabled
+[165516.737162]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.746578] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.746627]  ? handle_mm_fault+0xad/0x380
+[165516.746958] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.747278]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.747599] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.747927]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+
+[165516.748582]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.748908] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.749233]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.749572] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.749917]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.750262] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.750916]  ? irqentry_exit+0x43/0x50
+[165516.751290] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.751667]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.752136] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.752517]  ? exc_page_fault+0x94/0x1b0
+[165516.752897] FS:  00007d33053e9ec0(0000) GS:ff329020bfa80000(0000) knlGS:0000000000000000
+[165516.753282]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.753678] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.754068] RIP: 0033:0x7d330791674c
+[165516.754461] CR2: 0000000000000008 CR3: 000000201b740004 CR4: 0000000000f71ef0
+[165516.754856] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.755249] PKRU: 55555554
+[165516.755636] RSP: 002b:00007ffe15796510 EFLAGS: 00000293
+[165516.756035] note: fio[13737] exited with irqs disabled
+[165516.756436]  ORIG_RAX: 0000000000000003
+[165516.766668] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.766884] RAX: ffffffffffffffda RBX: 00007d33023722f0 RCX: 00007d330791674c
+[165516.767219] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.767531] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.768147] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.768486] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+
+[165516.769170] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.769511] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.769844] R13: 00007d32faf8eb20 R14: 0000000000000000 R15: 00007d32faf8eb20
+[165516.770187] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.770530]  </TASK>
+[165516.770872] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.771209] Modules linked in:
+[165516.771551] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.771891]  rpcsec_gss_krb5
+[165516.772236] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.772578]  blocklayoutdriver
+[165516.772922] FS:  00007d33053e9ec0(0000) GS:ff3290313fa80000(0000) knlGS:0000000000000000
+[165516.773259]  nfsv4
+[165516.773603] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.773931]  nfs
+[165516.774252] CR2: 0000000000000008 CR3: 000000201c2a8001 CR4: 0000000000f71ef0
+[165516.774565]  netfs
+[165516.774886] PKRU: 55555554
+[165516.775506]  nvme_rdma
+[165516.775850] note: fio[13747] exited with irqs disabled
+[165516.776191]  qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.786342] CR2: 0000000000000008
+[165516.786609] ---[ end trace 0000000000000000 ]---
+[165516.786612] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.787291] #PF: supervisor read access in kernel mode
+[165516.787619] #PF: error_code(0x0000) - not-present page
+[165516.787926] PGD 201c117067 P4D 0
+[165516.788211] Oops: 0000 [#56] PREEMPT SMP NOPTI
+[165516.788486] CPU: 18 PID: 13743 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.788764] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.789034] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.789307] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.789858] RSP: 0018:ff8004bad7883d90 EFLAGS: 00010202
+[165516.790136] RAX: 0000000000000000 RBX: ff8004bad841e000 RCX: 0000000000000000
+[165516.790411] RDX: 0000000000000100 RSI: ff328fad5eb4a000 RDI: 0000000000000000
+[165516.790678] RBP: ff8004bad7883dd0 R08: 0000000000000000 R09: 0000000000000000
+[165516.790943] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.791206] R13: ff328fad53665de0 R14: 00000000ffffffe4 R15: 0000000000090d99
+[165516.791469] FS:  00007d33053e9ec0(0000) GS:ff329062bf800000(0000) knlGS:0000000000000000
+[165516.791733] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.791994] CR2: 0000000000000008 CR3: 000000201c154005 CR4: 0000000000f71ef0
+[165516.792357] PKRU: 55555554
+[165516.792617] Call Trace:
+[165516.792874]  <TASK>
+[165516.793132]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.793395]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.793679]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.793943]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.794209]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.794474]  filp_flush+0x35/0x90
+[165516.794718]  __x64_sys_close+0x34/0x90
+[165516.794961]  x64_sys_call+0x1fec/0x25a0
+[165516.795203]  do_syscall_64+0x7f/0x180
+[165516.795441]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.795678]  ? irqentry_exit+0x43/0x50
+[165516.795911]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.796140]  ? exc_page_fault+0x94/0x1b0
+[165516.796370]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.796604] RIP: 0033:0x7d330791674c
+[165516.796856] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.797424] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.797661] RAX: ffffffffffffffda RBX: 00007d33023731f0 RCX: 00007d330791674c
+[165516.797893] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.798122] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.798348] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.798567] R13: 00007d32faab8b20 R14: 0000000000000000 R15: 00007d32faab8b20
+[165516.798786]  </TASK>
+[165516.798995] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.799087]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.801419] CR2: 0000000000000008
+[165516.801655] ---[ end trace 0000000000000000 ]---
+[165516.801656] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.802361] #PF: supervisor read access in kernel mode
+[165516.802653] #PF: error_code(0x0000) - not-present page
+[165516.802930] PGD 201c25a067 P4D 0
+[165516.803200] Oops: 0000 [#57] PREEMPT SMP NOPTI
+[165516.803461] CPU: 37 PID: 13748 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.803730] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.803996] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.804260] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.804790] RSP: 0018:ff8004bad78abcc0 EFLAGS: 00010202
+[165516.805064] RAX: 0000000000000000 RBX: ff8004bad801a000 RCX: 0000000000000000
+[165516.805338] RDX: 0000000000000100 RSI: ff328f0fdca86000 RDI: 0000000000000000
+[165516.805606] RBP: ff8004bad78abd00 R08: 0000000000000000 R09: 0000000000000000
+[165516.805870] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.806133] R13: ff328f0fd362e5e0 R14: 00000000ffffffe4 R15: 0000000000094f2c
+[165516.806397] FS:  00007d33053e9ec0(0000) GS:ff3290103f880000(0000) knlGS:0000000000000000
+[165516.806665] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.806932] CR2: 0000000000000008 CR3: 000000201c336006 CR4: 0000000000f71ef0
+[165516.807104] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.807297] PKRU: 55555554
+[165516.807576] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.807846] Call Trace:
+[165516.808417] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.808707]  <TASK>
+[165516.808999] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.809292]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.809569] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.809842]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.810111] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.810384]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.810655] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.810926]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.811197] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.811471]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.811744] FS:  00007d33053e9ec0(0000) GS:ff3290103f900000(0000) knlGS:0000000000000000
+[165516.812015]  filp_flush+0x35/0x90
+[165516.812285] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.812638]  __x64_sys_close+0x34/0x90
+[165516.812900] CR2: 0000000000000008 CR3: 000000201bb76002 CR4: 0000000000f71ef0
+[165516.813156]  x64_sys_call+0x1fec/0x25a0
+[165516.813412] PKRU: 55555554
+[165516.813661]  do_syscall_64+0x7f/0x180
+[165516.813904] note: fio[13735] exited with irqs disabled
+[165516.814145]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.814624]  ? __count_memcg_events+0x6b/0x120
+[165516.814866]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.815104]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.815344]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.815585]  ? handle_mm_fault+0xad/0x380
+[165516.815828]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.816067]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.816303]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.816539]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.816771]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.816997]  ? irqentry_exit+0x43/0x50
+[165516.817214]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.817428]  ? exc_page_fault+0x94/0x1b0
+[165516.817734]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.817950] RIP: 0033:0x7d330791674c
+[165516.818180] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.818633] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.818864] RAX: ffffffffffffffda RBX: 00007d3302373b50 RCX: 00007d330791674c
+[165516.819093] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.819321] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.819547] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.819772] R13: 00007d32faba22c0 R14: 0000000000000000 R15: 00007d32faba22c0
+[165516.819993]  </TASK>
+[165516.820202] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.820288]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.822662] CR2: 0000000000000008
+[165516.822901] ---[ end trace 0000000000000000 ]---
+[165516.822903] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.823520] #PF: supervisor read access in kernel mode
+[165516.823802] #PF: error_code(0x0000) - not-present page
+[165516.824070] PGD 201c1be067 P4D 0
+[165516.824337] Oops: 0000 [#58] PREEMPT SMP NOPTI
+[165516.824598] CPU: 35 PID: 13745 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.824865] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.825131] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.825397] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.825931] RSP: 0018:ff8004bad7893c10 EFLAGS: 00010202
+[165516.826202] RAX: 0000000000000000 RBX: ff8004bad831d000 RCX: 0000000000000000
+[165516.826470] RDX: 0000000000000100 RSI: ff328fccdbbb6800 RDI: 0000000000000000
+[165516.826739] RBP: ff8004bad7893c50 R08: 0000000000000000 R09: 0000000000000000
+[165516.827009] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.827276] R13: ff328fccd36309e0 R14: 00000000ffffffe4 R15: 00000000000945f3
+[165516.827535] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.827637] FS:  00007d33053e9ec0(0000) GS:ff3290733d280000(0000) knlGS:0000000000000000
+[165516.828042] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.828439] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.829186] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.829605] CR2: 0000000000000008 CR3: 000000201c27c002 CR4: 0000000000f71ef0
+
+[165516.829609] PKRU: 55555554
+[165516.830024] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.830452] Call Trace:
+[165516.830875] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.831298]  <TASK>
+[165516.831724] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.832142]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.832542] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.833038]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.833436] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.833842]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.834244] FS:  00007d33053e9ec0(0000) GS:ff329062bf800000(0000) knlGS:0000000000000000
+[165516.834649]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.835050] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.835448]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.835836] CR2: 0000000000000008 CR3: 000000201c154005 CR4: 0000000000f71ef0
+[165516.836222]  filp_flush+0x35/0x90
+[165516.836601] PKRU: 55555554
+[165516.836979]  __x64_sys_close+0x34/0x90
+[165516.837356] note: fio[13743] exited with irqs disabled
+[165516.837733]  x64_sys_call+0x1fec/0x25a0
+[165516.839086]  do_syscall_64+0x7f/0x180
+[165516.839353]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.839615]  ? handle_pte_fault+0x16e/0x1d0
+[165516.839868]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.840120]  ? __handle_mm_fault+0x654/0x790
+[165516.840368]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.840603]  ? __count_memcg_events+0x6b/0x120
+[165516.840839]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.841071]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.841302]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.841527]  ? handle_mm_fault+0xad/0x380
+[165516.841747]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.841961]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.842173]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.842379]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.842588]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.842794]  ? irqentry_exit+0x43/0x50
+[165516.843002]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.843207]  ? exc_page_fault+0x94/0x1b0
+[165516.843508]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.843713] RIP: 0033:0x7d330791674c
+[165516.843935] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.844357] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.844574] RAX: ffffffffffffffda RBX: 00007d33023735b0 RCX: 00007d330791674c
+[165516.844788] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.845003] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.845216] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.845427] R13: 00007d32fab16160 R14: 0000000000000000 R15: 00007d32fab16160
+[165516.845640]  </TASK>
+[165516.845846] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.845939]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.848200] CR2: 0000000000000008
+[165516.848416] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.848530] ---[ end trace 0000000000000000 ]---
+[165516.848532] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.848537] #PF: supervisor read access in kernel mode
+[165516.848539] #PF: error_code(0x0000) - not-present page
+[165516.848541] PGD 201b1e7067 P4D 0
+[165516.848544] Oops: 0000 [#59] PREEMPT SMP NOPTI
+[165516.848548] CPU: 25 PID: 13738 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.848550] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.848552] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.848561] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.848563] RSP: 0018:ff8004bad785bb38 EFLAGS: 00010202
+[165516.848564] RAX: 0000000000000000 RBX: ff8004bad811b000 RCX: 0000000000000000
+[165516.848566] RDX: 0000000000000100 RSI: ff328f4eddc1f000 RDI: 0000000000000000
+[165516.848567] RBP: ff8004bad785bb78 R08: 0000000000000000 R09: 0000000000000000
+[165516.848568] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.848569] R13: ff328f4ed35f09e0 R14: 00000000ffffffe4 R15: 000000000008d0a5
+[165516.848571] FS:  00007d33053e9ec0(0000) GS:ff3290313f880000(0000) knlGS:0000000000000000
+[165516.848572] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.848573] CR2: 0000000000000008 CR3: 000000201c6e8003 CR4: 0000000000f71ef0
+[165516.848575] PKRU: 55555554
+[165516.848576] Call Trace:
+[165516.848578]  <TASK>
+[165516.848582]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.848586]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.848616]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.848636]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.848656]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.848677]  filp_flush+0x35/0x90
+[165516.848682]  __x64_sys_close+0x34/0x90
+[165516.848685]  x64_sys_call+0x1fec/0x25a0
+[165516.848688]  do_syscall_64+0x7f/0x180
+[165516.848692]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848695]  ? node_is_toptier+0x42/0x60
+[165516.848699]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848700]  ? task_numa_fault+0x87/0x3f0
+[165516.848704]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848706]  ? mpol_misplaced+0x69/0x200
+[165516.848709]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848711]  ? do_numa_page+0x24d/0x3c0
+[165516.848715]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848716]  ? handle_pte_fault+0x16e/0x1d0
+[165516.848719]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848720]  ? __handle_mm_fault+0x654/0x790
+[165516.848724]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848725]  ? __count_memcg_events+0x6b/0x120
+[165516.848728]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848730]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.848732]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848733]  ? handle_mm_fault+0xad/0x380
+[165516.848735]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848737]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.848740]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848742]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.848744]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848746]  ? irqentry_exit+0x43/0x50
+[165516.848748]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.848749]  ? exc_page_fault+0x94/0x1b0
+[165516.848751]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.848754] RIP: 0033:0x7d330791674c
+[165516.848777] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.848779] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.848781] RAX: ffffffffffffffda RBX: 00007d3302372890 RCX: 00007d330791674c
+[165516.848782] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.848783] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.848784] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.848785] R13: 00007d32fb01ac80 R14: 0000000000000000 R15: 00007d32fb01ac80
+[165516.848789]  </TASK>
+[165516.848789] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.848874]  xhci_pci_renesas
+[165516.848874] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.848877] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.848879] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.848881] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.848882] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.848883] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.848884] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.848886] FS:  00007d33053e9ec0(0000) GS:ff3290103f880000(0000) knlGS:0000000000000000
+[165516.848888] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.848889] CR2: 0000000000000008 CR3: 000000201c336006 CR4: 0000000000f71ef0
+[165516.848890] PKRU: 55555554
+[165516.848892] note: fio[13748] exited with irqs disabled
+[165516.869827]  mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.870083] CR2: 0000000000000008
+[165516.870213] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.870421] ---[ end trace 0000000000000000 ]---
+[165516.870423] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.870426] #PF: supervisor read access in kernel mode
+[165516.870428] #PF: error_code(0x0000) - not-present page
+[165516.870430] PGD 201c03f067 P4D 0
+[165516.870432] Oops: 0000 [#60] PREEMPT SMP NOPTI
+[165516.870436] CPU: 36 PID: 13740 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.870438] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.870440] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.870446] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.870447] RSP: 0018:ff8004bad786bd48 EFLAGS: 00010202
+[165516.870449] RAX: 0000000000000000 RBX: ff8004bad821c000 RCX: 0000000000000000
+[165516.870451] RDX: 0000000000000100 RSI: ff328f0fd7eb6800 RDI: 0000000000000000
+[165516.870452] RBP: ff8004bad786bd88 R08: 0000000000000000 R09: 0000000000000000
+[165516.870453] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.870454] R13: ff328fccd7a9b9e0 R14: 00000000ffffffe4 R15: 0000000000093f38
+[165516.870456] FS:  00007d33053e9ec0(0000) GS:ff3290103f800000(0000) knlGS:0000000000000000
+[165516.870457] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.870459] CR2: 0000000000000008 CR3: 000000201c096001 CR4: 0000000000f71ef0
+[165516.870460] PKRU: 55555554
+[165516.870461] Call Trace:
+[165516.870463]  <TASK>
+[165516.870467]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.870470]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.870498]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.870517]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.870538]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.870559]  filp_flush+0x35/0x90
+[165516.870565]  __x64_sys_close+0x34/0x90
+[165516.870567]  x64_sys_call+0x1fec/0x25a0
+[165516.870571]  do_syscall_64+0x7f/0x180
+[165516.870575]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870578]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.870582]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870583]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.870586]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870588]  ? irqentry_exit+0x43/0x50
+[165516.870589]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870591]  ? exc_page_fault+0x94/0x1b0
+[165516.870593]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.870596] RIP: 0033:0x7d330791674c
+[165516.870614] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.870616] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.870618] RAX: ffffffffffffffda RBX: 00007d3302372c50 RCX: 00007d330791674c
+[165516.870619] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.870620] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.870621] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.870622] R13: 00007d32fb0782c0 R14: 0000000000000000 R15: 00007d32fb0782c0
+[165516.870626]  </TASK>
+[165516.870627] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.870697]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.870704] CR2: 0000000000000008
+[165516.870706] ---[ end trace 0000000000000000 ]---
+[165516.870708] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.870712] #PF: supervisor read access in kernel mode
+[165516.870714] #PF: error_code(0x0000) - not-present page
+[165516.870716] PGD 201c18a067 P4D 0
+[165516.870720] Oops: 0000 [#61] PREEMPT SMP NOPTI
+[165516.870724] CPU: 19 PID: 13744 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.870727] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.870729] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.870737] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.870739] RSP: 0018:ff8004bad788ba90 EFLAGS: 00010202
+[165516.870742] RAX: 0000000000000000 RBX: ff8004bad851f000 RCX: 0000000000000000
+[165516.870744] RDX: 0000000000000100 RSI: ff328fad59191800 RDI: 0000000000000000
+[165516.870745] RBP: ff8004bad788bad0 R08: 0000000000000000 R09: 0000000000000000
+[165516.870747] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.870749] R13: ff328fad535f3de0 R14: 00000000ffffffe4 R15: 0000000000094fa6
+[165516.870751] FS:  00007d33053e9ec0(0000) GS:ff329062bf880000(0000) knlGS:0000000000000000
+[165516.870753] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.870754] CR2: 0000000000000008 CR3: 000000201c16a003 CR4: 0000000000f71ef0
+[165516.870756] PKRU: 55555554
+[165516.870757] Call Trace:
+[165516.870759]  <TASK>
+[165516.870765]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.870769]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.870798]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.870814] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.870817]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.870840]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.870862]  filp_flush+0x35/0x90
+[165516.870867]  __x64_sys_close+0x34/0x90
+[165516.870870]  x64_sys_call+0x1fec/0x25a0
+[165516.870874]  do_syscall_64+0x7f/0x180
+[165516.870881]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870884]  ? lockless_pages_from_mm+0xa6/0x180
+[165516.870889]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870891]  ? _raw_spin_lock_irqsave+0xe/0x20
+[165516.870894]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870896]  ? cputime_adjust+0x98/0xe0
+[165516.870900]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870902]  ? task_cputime_adjusted+0x6c/0xb0
+[165516.870904]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870906]  ? get_task_mm+0x43/0x60
+[165516.870909]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870911]  ? mmput+0x12/0x40
+[165516.870914]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870916]  ? getrusage+0x22f/0x4b0
+[165516.870922]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870924]  ? __do_sys_getrusage+0x6c/0xb0
+[165516.870928]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870930]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.870933]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870935]  ? syscall_exit_to_user_mode+0x43/0x1e0
+[165516.870938]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870940]  ? do_syscall_64+0x8c/0x180
+[165516.870942]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870944]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.870946]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870948]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.870950]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870952]  ? irqentry_exit+0x43/0x50
+[165516.870954]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.870956]  ? exc_page_fault+0x94/0x1b0
+[165516.870958]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.870961] RIP: 0033:0x7d330791674c
+[165516.870985] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.870987] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.870989] RAX: ffffffffffffffda RBX: 00007d33023733d0 RCX: 00007d330791674c
+[165516.870991] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.870992] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.870993] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.870995] R13: 00007d32faae7640 R14: 0000000000000000 R15: 00007d32faae7640
+[165516.870999]  </TASK>
+[165516.871000] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.871081]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.871088] CR2: 0000000000000008
+[165516.871091] ---[ end trace 0000000000000000 ]---
+[165516.871092] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.871095] #PF: supervisor read access in kernel mode
+[165516.871097] #PF: error_code(0x0000) - not-present page
+[165516.871099] PGD 201c381067 P4D 0
+[165516.871103] Oops: 0000 [#62] PREEMPT SMP NOPTI
+[165516.871106] CPU: 31 PID: 13749 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.871109] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.871111] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.871116] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.871118] RSP: 0018:ff8004bad78b3ce0 EFLAGS: 00010202
+[165516.871120] RAX: 0000000000000000 RBX: ff8004bad8721000 RCX: 0000000000000000
+[165516.871122] RDX: 0000000000000100 RSI: ff328f4efdd52000 RDI: 0000000000000000
+[165516.871124] RBP: ff8004bad78b3d20 R08: 0000000000000000 R09: 0000000000000000
+[165516.871125] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.871127] R13: ff328fccd35f95e0 R14: 00000000ffffffe4 R15: 0000000000096f72
+[165516.871129] FS:  00007d33053e9ec0(0000) GS:ff3290733d080000(0000) knlGS:0000000000000000
+[165516.871131] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.871132] CR2: 0000000000000008 CR3: 000000201c34c005 CR4: 0000000000f71ef0
+[165516.871134] PKRU: 55555554
+[165516.871135] Call Trace:
+[165516.871137]  <TASK>
+[165516.871140]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.871144]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.871170]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.871556] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.871867]  nfs_wb_all+0x115/0x130 [nfs]
+
+[165516.872445]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.872720] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.873007]  filp_flush+0x35/0x90
+[165516.873290] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.873569]  __x64_sys_close+0x34/0x90
+[165516.874152] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.874450]  x64_sys_call+0x1fec/0x25a0
+[165516.874732] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.875004]  do_syscall_64+0x7f/0x180
+[165516.875275] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.875547]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.875816] FS:  00007d33053e9ec0(0000) GS:ff3290733d280000(0000) knlGS:0000000000000000
+[165516.876183]  ? __count_memcg_events+0x6b/0x120
+[165516.876458] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.876734]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.877003] CR2: 0000000000000008 CR3: 000000201c27c002 CR4: 0000000000f71ef0
+[165516.877267]  ? count_memcg_events.constprop.0+0x2a/0x50
+[165516.877526] PKRU: 55555554
+[165516.877781]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.878027] note: fio[13745] exited with irqs disabled
+[165516.878267]  ? handle_mm_fault+0xad/0x380
+[165516.891720] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.891881]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.892307] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.892695]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.893089] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.893825]  ? srso_alias_return_thunk+0x5/0xfbef5
+
+[165516.894609]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.895000] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.895388]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.895774] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.896160]  ? irqentry_exit+0x43/0x50
+[165516.896544] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.896923]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.897378] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.897741]  ? exc_page_fault+0x94/0x1b0
+[165516.898098] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.898446]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.898789] FS:  00007d33053e9ec0(0000) GS:ff3290103f800000(0000) knlGS:0000000000000000
+[165516.899125] RIP: 0033:0x7d330791674c
+[165516.899460] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.899788] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.900113] CR2: 0000000000000008 CR3: 000000201c096001 CR4: 0000000000f71ef0
+[165516.900438] RSP: 002b:00007ffe15796510 EFLAGS: 00000293
+[165516.900759] PKRU: 55555554
+[165516.901076]  ORIG_RAX: 0000000000000003
+[165516.901389] note: fio[13740] exited with irqs disabled
+[165516.901697] RAX: ffffffffffffffda RBX: 00007d3302373d30 RCX: 00007d330791674c
+[165516.913125] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.913351] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.913752] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.914138] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.914529] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.914916] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+
+[165516.915696] R13: 00007d32fabd0de0 R14: 0000000000000000 R15: 00007d32fabd0de0
+[165516.916084] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.916481]  </TASK>
+[165516.916870] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.917263] Modules linked in:
+[165516.917658] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.918035]  rpcsec_gss_krb5
+[165516.918396] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.918849]  blocklayoutdriver
+[165516.919220] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.919589]  nfsv4
+[165516.919959] FS:  00007d33053e9ec0(0000) GS:ff329062bf880000(0000) knlGS:0000000000000000
+[165516.920329]  nfs
+[165516.920699] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.921066]  netfs
+[165516.921427] CR2: 0000000000000008 CR3: 000000201c16a003 CR4: 0000000000f71ef0
+[165516.921780]  nvme_rdma
+[165516.922129] PKRU: 55555554
+[165516.922472]  qrtr
+[165516.922817] note: fio[13744] exited with irqs disabled
+[165516.923156]  cfg80211
+[165516.934640] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.934696]  rpcrdma
+[165516.935076] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.935436]  rdma_ucm
+[165516.935804] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.936167]  ib_iser
+
+[165516.936899]  libiscsi
+[165516.937270] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.937632]  scsi_transport_iscsi
+[165516.938000] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.938360]  ib_umad
+[165516.938715] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.939056]  intel_rapl_msr
+[165516.939400] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.939736]  intel_rapl_common
+[165516.940081] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.940421]  dax_hmem
+[165516.940763] FS:  00007d33053e9ec0(0000) GS:ff3290313f880000(0000) knlGS:0000000000000000
+[165516.941091]  cxl_acpi
+[165516.941428] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.941761]  amd64_edac
+[165516.942103] CR2: 0000000000000008 CR3: 000000201c6e8003 CR4: 0000000000f71ef0
+[165516.942442]  cxl_port
+[165516.943103] PKRU: 55555554
+[165516.943464]  edac_mce_amd
+[165516.943827] note: fio[13738] exited with irqs disabled
+[165516.944188]  binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.951436] CR2: 0000000000000008
+[165516.951681] ---[ end trace 0000000000000000 ]---
+[165516.951682] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.952175] #PF: supervisor read access in kernel mode
+[165516.952417] #PF: error_code(0x0000) - not-present page
+[165516.952658] PGD 1ffd301067 P4D 0
+[165516.952900] Oops: 0000 [#63] PREEMPT SMP NOPTI
+[165516.953139] CPU: 34 PID: 13736 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.953383] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.953628] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.953882] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.954392] RSP: 0018:ff8004bad784ba70 EFLAGS: 00010202
+[165516.954651] RAX: 0000000000000000 RBX: ff8004bad8822000 RCX: 0000000000000000
+[165516.954910] RDX: 0000000000000100 RSI: ff328fccd8244000 RDI: 0000000000000000
+[165516.955162] RBP: ff8004bad784bab0 R08: 0000000000000000 R09: 0000000000000000
+[165516.955407] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.955649] R13: ff328fccd366b9e0 R14: 00000000ffffffe4 R15: 0000000000095ace
+[165516.955890] FS:  00007d33053e9ec0(0000) GS:ff3290733d200000(0000) knlGS:0000000000000000
+[165516.956135] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.956382] CR2: 0000000000000008 CR3: 0000002006068006 CR4: 0000000000f71ef0
+[165516.956632] PKRU: 55555554
+[165516.956877] Call Trace:
+[165516.957121]  <TASK>
+[165516.957364]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.957610]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.957881]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.958139]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.958396]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.958652]  filp_flush+0x35/0x90
+[165516.958991]  __x64_sys_close+0x34/0x90
+[165516.959228]  x64_sys_call+0x1fec/0x25a0
+[165516.959464]  do_syscall_64+0x7f/0x180
+[165516.959693]  ? getrusage+0x22f/0x4b0
+[165516.959921]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.960150]  ? __do_sys_getrusage+0x6c/0xb0
+[165516.960376]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.960597]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.960823]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.961050]  ? syscall_exit_to_user_mode+0x43/0x1e0
+[165516.961280]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.961503]  ? do_syscall_64+0x8c/0x180
+[165516.961720]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.961931]  ? schedule+0x33/0x110
+[165516.962139]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.962341]  ? do_nanosleep+0x65/0x150
+[165516.962544]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.962743]  ? hrtimer_nanosleep+0xa2/0x170
+[165516.962937]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.963129]  ? rseq_get_rseq_cs+0x22/0x280
+[165516.963322]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.963510]  ? rseq_ip_fixup+0x90/0x1f0
+[165516.963698]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.963885]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.964068]  ? arch_exit_to_user_mode_prepare.isra.0+0x95/0xe0
+[165516.964253]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.964433]  ? syscall_exit_to_user_mode+0x43/0x1e0
+[165516.964614]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.964788]  ? do_syscall_64+0x8c/0x180
+[165516.964955]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.965119]  ? arch_exit_to_user_mode_prepare.isra.0+0x1a/0xe0
+[165516.965282]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.965446]  ? irqentry_exit_to_user_mode+0x38/0x1e0
+[165516.965611]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.965872]  ? irqentry_exit+0x43/0x50
+[165516.966035]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.966196]  ? exc_page_fault+0x94/0x1b0
+[165516.966355]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.966514] RIP: 0033:0x7d330791674c
+[165516.966687] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.967026] RSP: 002b:00007ffe15796510 EFLAGS: 00000293 ORIG_RAX: 0000000000000003
+[165516.967203] RAX: ffffffffffffffda RBX: 00007d33023724d0 RCX: 00007d330791674c
+[165516.967379] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.967557] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.967736] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.967914] R13: 00007d32fafbd640 R14: 0000000000000000 R15: 00007d32fafbd640
+[165516.968095]  </TASK>
+[165516.968270] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.968351]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.970423] CR2: 0000000000000008
+[165516.970646] ---[ end trace 0000000000000000 ]---
+[165516.970648] BUG: kernel NULL pointer dereference, address: 0000000000000008
+[165516.971234] #PF: supervisor read access in kernel mode
+[165516.971508] #PF: error_code(0x0000) - not-present page
+[165516.971774] PGD 201c1f2067 P4D 0
+[165516.972029] Oops: 0000 [#64] PREEMPT SMP NOPTI
+[165516.972284] CPU: 42 PID: 13746 Comm: fio Tainted: G      D W          6.8.0-101-generic #101-Ubuntu
+[165516.972649] Hardware name: Supermicro ASG-1115S-NE316R/H13SSF, BIOS 1.6 10/31/2023
+[165516.972924] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.973193] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.973725] RSP: 0018:ff8004bad789bd90 EFLAGS: 00010202
+[165516.974000] RAX: 0000000000000000 RBX: ff8004bad8923000 RCX: 0000000000000000
+[165516.974269] RDX: 0000000000000100 RSI: ff328f8dd879d800 RDI: 0000000000000000
+[165516.974536] RBP: ff8004bad789bdd0 R08: 0000000000000000 R09: 0000000000000000
+[165516.974804] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.975071] R13: ff328f8dd3555de0 R14: 00000000ffffffe4 R15: 00000000000959df
+[165516.975340] FS:  00007d33053e9ec0(0000) GS:ff3290523f800000(0000) knlGS:0000000000000000
+[165516.975612] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.975884] CR2: 0000000000000008 CR3: 000000201c292005 CR4: 0000000000f71ef0
+[165516.976157] PKRU: 55555554
+[165516.976427] Call Trace:
+[165516.976696]  <TASK>
+[165516.976968]  bl_prepare_layoutcommit+0xe/0x20 [blocklayoutdriver]
+[165516.977242]  pnfs_layoutcommit_inode+0x312/0x420 [nfsv4]
+[165516.977543]  pnfs_generic_sync+0x13/0x20 [nfsv4]
+[165516.977833]  nfs_wb_all+0x115/0x130 [nfs]
+[165516.978125]  nfs4_file_flush+0x7e/0xe0 [nfsv4]
+[165516.978401]  filp_flush+0x35/0x90
+[165516.978648]  __x64_sys_close+0x34/0x90
+[165516.978889]  x64_sys_call+0x1fec/0x25a0
+[165516.979065] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165516.979220]  do_syscall_64+0x7f/0x180
+[165516.979605] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165516.979973]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.980685] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165516.981074]  ? irqentry_exit+0x43/0x50
+[165516.981449] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165516.981817]  ? srso_alias_return_thunk+0x5/0xfbef5
+[165516.982187] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165516.982553]  ? exc_page_fault+0x94/0x1b0
+[165516.982919] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165516.983274]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[165516.983632] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165516.983989] RIP: 0033:0x7d330791674c
+[165516.984345] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165516.984696] Code: 0f 05 48 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d fc e8 10 1e f8 ff 8b 7d fc 89 c2 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 2c 89 d7 89 45 fc e8 72 1e f8 ff 8b 45 fc c9
+[165516.985135] FS:  00007d33053e9ec0(0000) GS:ff3290733d080000(0000) knlGS:0000000000000000
+[165516.985797] RSP: 002b:00007ffe15796510 EFLAGS: 00000293
+[165516.986167] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165516.986168]  ORIG_RAX: 0000000000000003
+[165516.986170] RAX: ffffffffffffffda RBX: 00007d3302373790 RCX: 00007d330791674c
+[165516.986470] CR2: 0000000000000008 CR3: 000000201c34c005 CR4: 0000000000f71ef0
+[165516.986839] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000006
+[165516.987207] PKRU: 55555554
+[165516.987573] RBP: 00007ffe15796520 R08: 0000000000000020 R09: 0000000000000000
+[165516.987939] note: fio[13749] exited with irqs disabled
+[165516.988301] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[165516.989551] R13: 00007d32fab44c80 R14: 0000000000000000 R15: 00007d32fab44c80
+[165516.989813]  </TASK>
+[165516.990064] Modules linked in: rpcsec_gss_krb5 blocklayoutdriver nfsv4 nfs netfs nvme_rdma qrtr cfg80211 rpcrdma rdma_ucm ib_iser libiscsi scsi_transport_iscsi ib_umad intel_rapl_msr intel_rapl_common dax_hmem cxl_acpi amd64_edac cxl_port edac_mce_amd binfmt_misc cxl_core rapl rdma_cm iw_cm ib_ipoib ipmi_ssif ib_cm nls_iso8859_1 ast i2c_algo_bit acpi_ipmi i2c_piix4 k10temp ipmi_si ccp ipmi_devintf ipmi_msghandler input_leds joydev mac_hid sch_fq_codel nfsd dm_multipath auth_rpcgss nfs_acl lockd grace nvme_fabrics msr nvme_keyring efi_pstore sunrpc nfnetlink dmi_sysfs ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 mlx5_ib ib_uverbs macsec ib_core raid0 hid_generic rndis_host usbhid cdc_ether hid usbnet mii mlx5_core crct10dif_pclmul crc32_pclmul mlxfw ixgbe polyval_clmulni nvme psample polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 xfrm_algo nvme_core tls ahci dca xhci_pci pci_hyperv_intf libahci
+[165516.990159]  xhci_pci_renesas mdio nvme_auth aesni_intel crypto_simd cryptd
+[165516.992992] CR2: 0000000000000008
+[165516.993266] ---[ end trace 0000000000000000 ]---
+[165517.001207] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165517.001631] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165517.002321] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165517.002667] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165517.002998] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165517.003328] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165517.003647] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165517.003952] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165517.004254] FS:  00007d33053e9ec0(0000) GS:ff3290733d200000(0000) knlGS:0000000000000000
+[165517.004559] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165517.004867] CR2: 0000000000000008 CR3: 0000002006068006 CR4: 0000000000f71ef0
+[165517.005174] PKRU: 55555554
+[165517.005468] note: fio[13736] exited with irqs disabled
+[165517.023337] RIP: 0010:ext_tree_prepare_commit+0x1b2/0x290 [blocklayoutdriver]
+[165517.023778] Code: 8b 45 c0 48 81 c3 00 10 00 00 48 39 c3 0f 83 4f ff ff ff 48 89 df e8 1d be 01 c8 49 8b 75 50 49 63 d4 41 83 c4 01 48 89 04 d6 <48> 8b 50 08 f6 c2 01 74 c6 48 8d 42 ff eb c2 a9 ff 0f 00 00 75 bb
+[165517.024465] RSP: 0018:ff8004bacf767a20 EFLAGS: 00010202
+[165517.024803] RAX: 0000000000000000 RBX: ff8004bacf8c9000 RCX: 0000000000000000
+[165517.025131] RDX: 0000000000000100 RSI: ff328f8dd8798800 RDI: 0000000000000000
+[165517.025452] RBP: ff8004bacf767a60 R08: 0000000000000000 R09: 0000000000000000
+[165517.025763] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000101
+[165517.026064] R13: ff328f8dd35555e0 R14: 00000000ffffffe4 R15: 000000000002f691
+[165517.026365] FS:  00007d33053e9ec0(0000) GS:ff3290523f800000(0000) knlGS:0000000000000000
+[165517.026664] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[165517.026960] CR2: 0000000000000008 CR3: 000000201c292005 CR4: 0000000000f71ef0
+[165517.027257] PKRU: 55555554
+[165517.027544] note: fio[13746] exited with irqs disabled
+
