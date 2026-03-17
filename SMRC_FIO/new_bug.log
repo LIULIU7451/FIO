@@ -1,0 +1,753 @@
+[ 2585.704403] nvme nvme8: creating 8 I/O queues.
+[ 2587.284394] nvme nvme8: mapped 8/0/0 default/read/poll queues.
+[ 2587.285587] nvme nvme8: new ctrl: NQN "nqn.2026-01.smrc.test.76", addr 10.10.                                                                                                                                                             44.76:4420, hostnqn: nqn.2014-08.org.nvmexpress:uuid:00000000-0000-0000-0000-7cc                                                                                                                                                             255512aeb
+[ 3669.980542] RPC: Could not send backchannel reply error: -110
+[ 3760.092150] RPC: Could not send backchannel reply error: -110
+[ 3787.228004] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228005] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228012] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228012] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228012] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228014] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228015] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228016] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228016] nfs: server 10.10.44.74 not responding, still trying
+[ 3787.228017] nfs: server 10.10.44.74 not responding, still trying
+[ 3882.971638] rpc_check_timeout: 19 callbacks suppressed
+[ 3882.971644] nfs: server 10.10.44.74 not responding, still trying
+[ 3882.971707] nfs: server 10.10.44.74 not responding, still trying
+[ 3882.971973] nfs: server 10.10.44.74 not responding, still trying
+[ 3882.971981] nfs: server 10.10.44.74 not responding, still trying
+[ 3883.012623] nfs: server 10.10.44.74 not responding, still trying
+[ 3883.012649] nfs: server 10.10.44.74 not responding, still trying
+[ 3883.012659] nfs: server 10.10.44.74 not responding, still trying
+[ 3883.012665] nfs: server 10.10.44.74 not responding, still trying
+[ 3883.012674] nfs: server 10.10.44.74 not responding, still trying
+[ 3883.012682] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.179208] rpc_check_timeout: 5 callbacks suppressed
+[ 3977.179212] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.179272] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.179468] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.179481] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.220214] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.220243] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.220250] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.220259] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.220268] nfs: server 10.10.44.74 not responding, still trying
+[ 3977.220276] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.386795] rpc_check_timeout: 5 callbacks suppressed
+[ 4071.386800] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.386858] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.387091] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.387100] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.387111] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.427796] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.427831] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.427839] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.427845] nfs: server 10.10.44.74 not responding, still trying
+[ 4071.427854] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.594235] rpc_check_timeout: 5 callbacks suppressed
+[ 4165.594239] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.594302] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.594514] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.594522] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.635385] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.635406] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.635414] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.635421] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.635433] nfs: server 10.10.44.74 not responding, still trying
+[ 4165.635439] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.801553] rpc_check_timeout: 5 callbacks suppressed
+[ 4259.801558] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.801627] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.801794] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.801802] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.841967] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.841991] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.842000] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.842008] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.842017] nfs: server 10.10.44.74 not responding, still trying
+[ 4259.842026] nfs: server 10.10.44.74 not responding, still trying
+[ 4350.335547] nvme nvme8: Removing ctrl: NQN "nqn.2026-01.smrc.test.76"
+[ 4354.008857] rpc_check_timeout: 4 callbacks suppressed
+[ 4354.008862] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.008925] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.009117] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.009125] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.009139] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.049547] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.049575] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.049580] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.049592] nfs: server 10.10.44.74 not responding, still trying
+[ 4354.049602] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.216231] rpc_check_timeout: 5 callbacks suppressed
+[ 4448.216235] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.216296] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.216506] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.216515] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.257146] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.257165] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.257171] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.257181] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.257188] nfs: server 10.10.44.74 not responding, still trying
+[ 4448.257196] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.423611] rpc_check_timeout: 5 callbacks suppressed
+[ 4542.423615] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.423676] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.423851] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.423861] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.464738] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.464760] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.464767] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.464774] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.464786] nfs: server 10.10.44.74 not responding, still trying
+[ 4542.464795] nfs: server 10.10.44.74 not responding, still trying
+[ 4550.615626] INFO: task io500:2530 blocked for more than 122 seconds.
+[ 4550.615653]       Not tainted 6.19.8 #1
+[ 4550.615662]       Blocked by coredump.
+[ 4550.615670] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.615681] task:io500           state:D stack:0     pid:2530  tgid:2530  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080801
+[ 4550.615686] Call Trace:
+[ 4550.615689]  <TASK>
+[ 4550.615694]  __schedule+0x48b/0x18c0
+[ 4550.615701]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.615705]  ? free_to_pcs_bulk+0x9d/0x670
+[ 4550.615716]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.615726]  schedule+0x27/0xf0
+[ 4550.615729]  io_schedule+0x4c/0x80
+[ 4550.615732]  folio_wait_bit_common+0x133/0x310
+[ 4550.615737]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.615741]  folio_wait_bit+0x18/0x30
+[ 4550.615743]  folio_wait_writeback+0x2b/0xa0
+[ 4550.615747]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.615755]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.615759]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.615781]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.615807]  filp_flush+0x70/0xb0
+[ 4550.615811]  filp_close+0x14/0x30
+[ 4550.615813]  put_files_struct.part.0+0x64/0xd0
+[ 4550.615818]  exit_files+0x5b/0x70
+[ 4550.615820]  do_exit+0x741/0xa40
+[ 4550.615824]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.615828]  do_group_exit+0x34/0x90
+[ 4550.615831]  get_signal+0x926/0x950
+[ 4550.615836]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.615842]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.615847]  do_syscall_64+0x2ab/0x500
+[ 4550.615851]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.615854]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.615857] RIP: 0033:0x706a3251c5dd
+[ 4550.615859] RSP: 002b:00007ffefd4d63e0 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.615862] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 0000706a3251c5dd
+[ 4550.615864] RDX: 000000000000b7a0 RSI: 00005d425408c000 RDI: 0000000000000014
+[ 4550.615865] RBP: 00007ffefd4d6400 R08: 0000000000000000 R09: 00005d425405dd40
+[ 4550.615867] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.615868] R13: 0000000000000014 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.615873]  </TASK>
+[ 4550.615874] INFO: task io500:2531 blocked for more than 122 seconds.
+[ 4550.615885]       Not tainted 6.19.8 #1
+[ 4550.615893]       Blocked by coredump.
+[ 4550.615900] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.615911] task:io500           state:D stack:0     pid:2531  tgid:2531  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080001
+[ 4550.615914] Call Trace:
+[ 4550.615915]  <TASK>
+[ 4550.615918]  __schedule+0x48b/0x18c0
+[ 4550.615921]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.615923]  ? free_to_pcs_bulk+0x9d/0x670
+[ 4550.615927]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.615934]  schedule+0x27/0xf0
+[ 4550.615937]  io_schedule+0x4c/0x80
+[ 4550.615940]  folio_wait_bit_common+0x133/0x310
+[ 4550.615943]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.615947]  folio_wait_bit+0x18/0x30
+[ 4550.615949]  folio_wait_writeback+0x2b/0xa0
+[ 4550.615952]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.615960]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.615963]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.615981]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.616002]  filp_flush+0x70/0xb0
+[ 4550.616005]  filp_close+0x14/0x30
+[ 4550.616007]  put_files_struct.part.0+0x64/0xd0
+[ 4550.616011]  exit_files+0x5b/0x70
+[ 4550.616013]  do_exit+0x741/0xa40
+[ 4550.616016]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616019]  do_group_exit+0x34/0x90
+[ 4550.616022]  get_signal+0x926/0x950
+[ 4550.616026]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.616031]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.616034]  do_syscall_64+0x2ab/0x500
+[ 4550.616036]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616039]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616041]  ? do_syscall_64+0x2e5/0x500
+[ 4550.616043]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616045]  ? do_syscall_64+0xbf/0x500
+[ 4550.616048]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616050]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.616052] RIP: 0033:0x79c03611c5dd
+[ 4550.616054] RSP: 002b:00007ffd92d73ae0 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.616057] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 000079c03611c5dd
+[ 4550.616058] RDX: 000000000000b7a0 RSI: 000059ef3c59a000 RDI: 0000000000000011
+[ 4550.616060] RBP: 00007ffd92d73b00 R08: 0000000000000000 R09: 000059ef3c57b320
+[ 4550.616061] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.616062] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.616067]  </TASK>
+[ 4550.616068] INFO: task io500:2532 blocked for more than 122 seconds.
+[ 4550.616078]       Not tainted 6.19.8 #1
+[ 4550.616086]       Blocked by coredump.
+[ 4550.616092] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.616103] task:io500           state:D stack:0     pid:2532  tgid:2532  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080801
+[ 4550.616106] Call Trace:
+[ 4550.616107]  <TASK>
+[ 4550.616109]  __schedule+0x48b/0x18c0
+[ 4550.616113]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616117]  schedule+0x27/0xf0
+[ 4550.616120]  io_schedule+0x4c/0x80
+[ 4550.616123]  folio_wait_bit_common+0x133/0x310
+[ 4550.616126]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.616130]  folio_wait_bit+0x18/0x30
+[ 4550.616132]  folio_wait_writeback+0x2b/0xa0
+[ 4550.616135]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.616143]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.616146]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.616163]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.616184]  filp_flush+0x70/0xb0
+[ 4550.616186]  filp_close+0x14/0x30
+[ 4550.616188]  put_files_struct.part.0+0x64/0xd0
+[ 4550.616192]  exit_files+0x5b/0x70
+[ 4550.616194]  do_exit+0x741/0xa40
+[ 4550.616197]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616200]  do_group_exit+0x34/0x90
+[ 4550.616203]  get_signal+0x926/0x950
+[ 4550.616207]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.616212]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.616215]  do_syscall_64+0x2ab/0x500
+[ 4550.616218]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616220]  ? ttwu_queue_wakelist+0x125/0x1b0
+[ 4550.616224]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616227]  ? nfs_ctx_key_to_expire+0xdd/0x140 [nfs]
+[ 4550.616244]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616247]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616249]  ? generic_file_llseek+0x21/0x40
+[ 4550.616252]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616254]  ? nfs_file_llseek+0x63/0xb0 [nfs]
+[ 4550.616272]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616275]  ? nfs4_file_llseek+0x2b/0x60 [nfsv4]
+[ 4550.616295]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616298]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616300]  ? ksys_lseek+0xa3/0xd0
+[ 4550.616303]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616305]  ? __x64_sys_lseek+0x18/0x30
+[ 4550.616308]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616310]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.616314]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616316]  ? do_syscall_64+0xbf/0x500
+[ 4550.616318]  ? up_write+0x4f/0x60
+[ 4550.616321]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616323]  ? nfs_end_io_write+0x15/0x20 [nfs]
+[ 4550.616341]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616344]  ? nfs_file_write+0x13f/0x310 [nfs]
+[ 4550.616361]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616363]  ? vfs_write+0x29e/0x480
+[ 4550.616368]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616370]  ? restore_fpregs_from_fpstate+0x3d/0xc0
+[ 4550.616374]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616376]  ? switch_fpu_return+0x5c/0x100
+[ 4550.616378]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616381]  ? do_syscall_64+0x2e5/0x500
+[ 4550.616383]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616385]  ? __x64_sys_lseek+0x18/0x30
+[ 4550.616388]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616390]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.616392]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616394]  ? do_syscall_64+0xbf/0x500
+[ 4550.616396]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616398]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.616401]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616403]  ? do_syscall_64+0xbf/0x500
+[ 4550.616405]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616408]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.616410] RIP: 0033:0x71fd9791c5dd
+[ 4550.616412] RSP: 002b:00007fff03b40e20 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.616414] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 000071fd9791c5dd
+[ 4550.616415] RDX: 000000000000b7a0 RSI: 000063d2fd732000 RDI: 0000000000000011
+[ 4550.616416] RBP: 00007fff03b40e40 R08: 0000000000000000 R09: 000063d2fd7233b0
+[ 4550.616418] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.616419] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.616423]  </TASK>
+[ 4550.616425] INFO: task io500:2533 blocked for more than 122 seconds.
+[ 4550.616434]       Not tainted 6.19.8 #1
+[ 4550.616442]       Blocked by coredump.
+[ 4550.616449] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.616460] task:io500           state:D stack:0     pid:2533  tgid:2533  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080001
+[ 4550.616463] Call Trace:
+[ 4550.616464]  <TASK>
+[ 4550.616466]  __schedule+0x48b/0x18c0
+[ 4550.616469]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616473]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.616502]  schedule+0x27/0xf0
+[ 4550.616505]  io_schedule+0x4c/0x80
+[ 4550.616509]  folio_wait_bit_common+0x133/0x310
+[ 4550.616513]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.616517]  folio_wait_bit+0x18/0x30
+[ 4550.616520]  folio_wait_writeback+0x2b/0xa0
+[ 4550.616523]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.616531]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.616535]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.616553]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.616574]  filp_flush+0x70/0xb0
+[ 4550.616577]  filp_close+0x14/0x30
+[ 4550.616580]  put_files_struct.part.0+0x64/0xd0
+[ 4550.616583]  exit_files+0x5b/0x70
+[ 4550.616586]  do_exit+0x741/0xa40
+[ 4550.616589]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616592]  do_group_exit+0x34/0x90
+[ 4550.616595]  get_signal+0x926/0x950
+[ 4550.616599]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.616604]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.616608]  do_syscall_64+0x2ab/0x500
+[ 4550.616610]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616613]  ? do_syscall_64+0x2e5/0x500
+[ 4550.616615]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616617]  ? __x64_sys_lseek+0x18/0x30
+[ 4550.616620]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616622]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.616625]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616627]  ? do_syscall_64+0xbf/0x500
+[ 4550.616629]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616631]  ? do_syscall_64+0xbf/0x500
+[ 4550.616634]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616637]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.616639] RIP: 0033:0x79815111c5dd
+[ 4550.616641] RSP: 002b:00007ffde2e3fd50 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.616643] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 000079815111c5dd
+[ 4550.616644] RDX: 000000000000b7a0 RSI: 00005d7d77e4d000 RDI: 0000000000000011
+[ 4550.616646] RBP: 00007ffde2e3fd70 R08: 0000000000000000 R09: 00005d7d77e3bf00
+[ 4550.616648] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.616649] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.616653]  </TASK>
+[ 4550.616655] INFO: task io500:2536 blocked for more than 122 seconds.
+[ 4550.616665]       Not tainted 6.19.8 #1
+[ 4550.616673]       Blocked by coredump.
+[ 4550.616680] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.616691] task:io500           state:D stack:0     pid:2536  tgid:2536  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080001
+[ 4550.616695] Call Trace:
+[ 4550.616697]  <TASK>
+[ 4550.616700]  __schedule+0x48b/0x18c0
+[ 4550.616703]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616708]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.616715]  schedule+0x27/0xf0
+[ 4550.616717]  io_schedule+0x4c/0x80
+[ 4550.616720]  folio_wait_bit_common+0x133/0x310
+[ 4550.616724]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.616728]  folio_wait_bit+0x18/0x30
+[ 4550.616731]  folio_wait_writeback+0x2b/0xa0
+[ 4550.616734]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.616742]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.616746]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.616763]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.616785]  filp_flush+0x70/0xb0
+[ 4550.616787]  filp_close+0x14/0x30
+[ 4550.616790]  put_files_struct.part.0+0x64/0xd0
+[ 4550.616794]  exit_files+0x5b/0x70
+[ 4550.616796]  do_exit+0x741/0xa40
+[ 4550.616799]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616802]  ? rwsem_wake.isra.0+0x71/0xa0
+[ 4550.616805]  do_group_exit+0x34/0x90
+[ 4550.616808]  get_signal+0x926/0x950
+[ 4550.616812]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.616818]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.616821]  do_syscall_64+0x2ab/0x500
+[ 4550.616824]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616827]  ? restore_fpregs_from_fpstate+0x3d/0xc0
+[ 4550.616830]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616832]  ? switch_fpu_return+0x5c/0x100
+[ 4550.616835]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616837]  ? do_syscall_64+0x2e5/0x500
+[ 4550.616840]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616843]  ? __x64_sys_lseek+0x18/0x30
+[ 4550.616845]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616848]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.616850]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616853]  ? do_syscall_64+0xbf/0x500
+[ 4550.616855]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616858]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.616860] RIP: 0033:0x7338dd51c5dd
+[ 4550.616862] RSP: 002b:00007ffe5be2f2d0 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.616864] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 00007338dd51c5dd
+[ 4550.616866] RDX: 000000000000b7a0 RSI: 00005bcf3976d000 RDI: 0000000000000011
+[ 4550.616867] RBP: 00007ffe5be2f2f0 R08: 0000000000000000 R09: 00005bcf39753990
+[ 4550.616869] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.616870] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.616874]  </TASK>
+[ 4550.616876] INFO: task io500:2540 blocked for more than 122 seconds.
+[ 4550.616886]       Not tainted 6.19.8 #1
+[ 4550.616894]       Blocked by coredump.
+[ 4550.616901] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.616912] task:io500           state:D stack:0     pid:2540  tgid:2540  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080001
+[ 4550.616916] Call Trace:
+[ 4550.616917]  <TASK>
+[ 4550.616919]  __schedule+0x48b/0x18c0
+[ 4550.616922]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.616924]  ? free_to_pcs_bulk+0x9d/0x670
+[ 4550.616928]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.616935]  schedule+0x27/0xf0
+[ 4550.616937]  io_schedule+0x4c/0x80
+[ 4550.616940]  folio_wait_bit_common+0x133/0x310
+[ 4550.616944]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.616948]  folio_wait_bit+0x18/0x30
+[ 4550.616950]  folio_wait_writeback+0x2b/0xa0
+[ 4550.616953]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.616961]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.616964]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.616981]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.617003]  filp_flush+0x70/0xb0
+[ 4550.617005]  filp_close+0x14/0x30
+[ 4550.617007]  put_files_struct.part.0+0x64/0xd0
+[ 4550.617011]  exit_files+0x5b/0x70
+[ 4550.617013]  do_exit+0x741/0xa40
+[ 4550.617016]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617020]  do_group_exit+0x34/0x90
+[ 4550.617023]  get_signal+0x926/0x950
+[ 4550.617027]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.617032]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.617036]  do_syscall_64+0x2ab/0x500
+[ 4550.617038]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617040]  ? __x64_sys_lseek+0x18/0x30
+[ 4550.617043]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617046]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.617048]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617050]  ? do_syscall_64+0xbf/0x500
+[ 4550.617052]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617055]  ? do_syscall_64+0xbf/0x500
+[ 4550.617057]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617059]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.617062]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617064]  ? do_syscall_64+0xbf/0x500
+[ 4550.617066]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617069]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.617071] RIP: 0033:0x71606191c5dd
+[ 4550.617073] RSP: 002b:00007ffc924a4b30 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.617076] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 000071606191c5dd
+[ 4550.617077] RDX: 000000000000b7a0 RSI: 0000578a4e1fb000 RDI: 0000000000000011
+[ 4550.617078] RBP: 00007ffc924a4b50 R08: 0000000000000000 R09: 0000578a4e1e6f00
+[ 4550.617080] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.617081] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.617085]  </TASK>
+[ 4550.617087] INFO: task io500:2543 blocked for more than 122 seconds.
+[ 4550.617097]       Not tainted 6.19.8 #1
+[ 4550.617105]       Blocked by coredump.
+[ 4550.617112] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.617122] task:io500           state:D stack:0     pid:2543  tgid:2543  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080001
+[ 4550.617125] Call Trace:
+[ 4550.617127]  <TASK>
+[ 4550.617129]  __schedule+0x48b/0x18c0
+[ 4550.617132]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617134]  ? free_to_pcs_bulk+0x276/0x670
+[ 4550.617138]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.617145]  schedule+0x27/0xf0
+[ 4550.617148]  io_schedule+0x4c/0x80
+[ 4550.617150]  folio_wait_bit_common+0x133/0x310
+[ 4550.617154]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.617157]  folio_wait_bit+0x18/0x30
+[ 4550.617160]  folio_wait_writeback+0x2b/0xa0
+[ 4550.617163]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.617171]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.617174]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.617192]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.617213]  filp_flush+0x70/0xb0
+[ 4550.617216]  filp_close+0x14/0x30
+[ 4550.617218]  put_files_struct.part.0+0x64/0xd0
+[ 4550.617222]  exit_files+0x5b/0x70
+[ 4550.617224]  do_exit+0x741/0xa40
+[ 4550.617227]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617230]  do_group_exit+0x34/0x90
+[ 4550.617234]  get_signal+0x926/0x950
+[ 4550.617238]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.617242]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.617246]  do_syscall_64+0x2ab/0x500
+[ 4550.617250]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617252]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617254]  ? ksys_write+0xdb/0xf0
+[ 4550.617257]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617260]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617262]  ? do_syscall_64+0x2e5/0x500
+[ 4550.617265]  ? ksys_lseek+0xa3/0xd0
+[ 4550.617268]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617270]  ? generic_file_llseek+0x21/0x40
+[ 4550.617273]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617275]  ? nfs_file_llseek+0x63/0xb0 [nfs]
+[ 4550.617293]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617295]  ? nfs4_file_llseek+0x2b/0x60 [nfsv4]
+[ 4550.617316]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617319]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617321]  ? ksys_lseek+0xa3/0xd0
+[ 4550.617324]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617326]  ? __x64_sys_lseek+0x18/0x30
+[ 4550.617329]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617331]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.617333]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617335]  ? do_syscall_64+0xbf/0x500
+[ 4550.617338]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617340]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.617342]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617344]  ? do_syscall_64+0xbf/0x500
+[ 4550.617347]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617350]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.617351] RIP: 0033:0x73399ed1c5dd
+[ 4550.617353] RSP: 002b:00007ffe89b7d7c0 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.617356] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 000073399ed1c5dd
+[ 4550.617357] RDX: 000000000000b7a0 RSI: 0000570b319ee000 RDI: 0000000000000011
+[ 4550.617358] RBP: 00007ffe89b7d7e0 R08: 0000000000000000 R09: 0000570b319da4e0
+[ 4550.617360] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.617361] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.617365]  </TASK>
+[ 4550.617368] INFO: task io500:2556 blocked for more than 122 seconds.
+[ 4550.617378]       Not tainted 6.19.8 #1
+[ 4550.617385]       Blocked by coredump.
+[ 4550.617392] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.617403] task:io500           state:D stack:0     pid:2556  tgid:2546  ppi                                                                                                                                                             d:1      task_flags:0x40044c flags:0x00080801
+[ 4550.617406] Call Trace:
+[ 4550.617408]  <TASK>
+[ 4550.617410]  __schedule+0x48b/0x18c0
+[ 4550.617413]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617415]  ? free_to_pcs_bulk+0x9d/0x670
+[ 4550.617419]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.617426]  schedule+0x27/0xf0
+[ 4550.617429]  io_schedule+0x4c/0x80
+[ 4550.617432]  folio_wait_bit_common+0x133/0x310
+[ 4550.617436]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.617439]  folio_wait_bit+0x18/0x30
+[ 4550.617442]  folio_wait_writeback+0x2b/0xa0
+[ 4550.617445]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.617452]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.617456]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.617479]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.617501]  filp_flush+0x70/0xb0
+[ 4550.617504]  filp_close+0x14/0x30
+[ 4550.617507]  put_files_struct.part.0+0x64/0xd0
+[ 4550.617511]  exit_files+0x5b/0x70
+[ 4550.617514]  do_exit+0x741/0xa40
+[ 4550.617516]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617520]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617523]  do_group_exit+0x34/0x90
+[ 4550.617527]  get_signal+0x926/0x950
+[ 4550.617531]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.617537]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.617540]  do_syscall_64+0x2ab/0x500
+[ 4550.617543]  ? ep_done_scan+0xe4/0x100
+[ 4550.617548]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617551]  ? aa_file_perm+0x7d/0x600
+[ 4550.617556]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617559]  ? ep_send_events+0x249/0x2a0
+[ 4550.617562]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617565]  ? ep_poll_callback+0x1a0/0x2a0
+[ 4550.617569]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617571]  ? __wake_up_common+0x79/0xb0
+[ 4550.617576]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617579]  ? eventfd_read+0xe1/0x210
+[ 4550.617581]  ? security_file_permission+0x86/0x150
+[ 4550.617584]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617586]  ? rw_verify_area+0x57/0x190
+[ 4550.617590]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617592]  ? vfs_read+0x261/0x390
+[ 4550.617596]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617599]  ? ksys_read+0xdb/0xf0
+[ 4550.617602]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617604]  ? __x64_sys_read+0x19/0x30
+[ 4550.617606]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617609]  ? x64_sys_call+0x2605/0x26b0
+[ 4550.617611]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617613]  ? do_syscall_64+0xbf/0x500
+[ 4550.617617]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617619]  ? do_user_addr_fault+0x1d2/0x8d0
+[ 4550.617623]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617625]  ? irqentry_exit+0xb2/0x6e0
+[ 4550.617629]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617632]  ? exc_page_fault+0x90/0x1b0
+[ 4550.617635]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.617637] RIP: 0033:0x7fc06c12a072
+[ 4550.617639] RSP: 002b:00007fc06b1fed70 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             000e8
+[ 4550.617642] RAX: fffffffffffffffc RBX: 0000000000000000 RCX: 00007fc06c12a072
+[ 4550.617643] RDX: 0000000000000020 RSI: 000065082d9881d0 RDI: 000000000000000a
+[ 4550.617645] RBP: 00007fc06b1fed90 R08: 0000000000000000 R09: 0000000000000000
+[ 4550.617646] R10: 00000000001f793b R11: 0000000000000293 R12: 000065082d9881d0
+[ 4550.617648] R13: 000065082d9881b0 R14: 000065082d9881b0 R15: 000065082d987f10
+[ 4550.617652]  </TASK>
+[ 4550.617654] INFO: task io500:2548 blocked for more than 122 seconds.
+[ 4550.617664]       Not tainted 6.19.8 #1
+[ 4550.617672]       Blocked by coredump.
+[ 4550.617679] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.617689] task:io500           state:D stack:0     pid:2548  tgid:2548  ppi                                                                                                                                                             d:1      task_flags:0x40040c flags:0x00080801
+[ 4550.617693] Call Trace:
+[ 4550.617694]  <TASK>
+[ 4550.617696]  __schedule+0x48b/0x18c0
+[ 4550.617699]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617701]  ? free_to_pcs_bulk+0x276/0x670
+[ 4550.617705]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.617712]  schedule+0x27/0xf0
+[ 4550.617715]  io_schedule+0x4c/0x80
+[ 4550.617718]  folio_wait_bit_common+0x133/0x310
+[ 4550.617722]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.617725]  folio_wait_bit+0x18/0x30
+[ 4550.617728]  folio_wait_writeback+0x2b/0xa0
+[ 4550.617731]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.617739]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.617742]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.617761]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.617782]  filp_flush+0x70/0xb0
+[ 4550.617785]  filp_close+0x14/0x30
+[ 4550.617787]  put_files_struct.part.0+0x64/0xd0
+[ 4550.617791]  exit_files+0x5b/0x70
+[ 4550.617793]  do_exit+0x741/0xa40
+[ 4550.617796]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617799]  do_group_exit+0x34/0x90
+[ 4550.617803]  get_signal+0x926/0x950
+[ 4550.617807]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.617812]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.617815]  do_syscall_64+0x2ab/0x500
+[ 4550.617818]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617820]  ? do_syscall_64+0xbf/0x500
+[ 4550.617822]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617825]  ? do_syscall_64+0xbf/0x500
+[ 4550.617827]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617829]  ? x64_sys_call+0x198a/0x26b0
+[ 4550.617832]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617834]  ? do_syscall_64+0xbf/0x500
+[ 4550.617836]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617839]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.617841] RIP: 0033:0x7fd77131c5dd
+[ 4550.617843] RSP: 002b:00007fff2cd953d0 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             00001
+[ 4550.617845] RAX: fffffffffffffffc RBX: 000000000000b7a0 RCX: 00007fd77131c5dd
+[ 4550.617847] RDX: 000000000000b7a0 RSI: 0000602ed1d67000 RDI: 0000000000000011
+[ 4550.617848] RBP: 00007fff2cd953f0 R08: 0000000000000000 R09: 0000602ed1d4e3c0
+[ 4550.617849] R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+[ 4550.617851] R13: 0000000000000011 R14: 000000000000b7a0 R15: 0000000000000000
+[ 4550.617855]  </TASK>
+[ 4550.617857] INFO: task io500:2562 blocked for more than 122 seconds.
+[ 4550.617867]       Not tainted 6.19.8 #1
+[ 4550.617875]       Blocked by coredump.
+[ 4550.617882] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this                                                                                                                                                              message.
+[ 4550.617893] task:io500           state:D stack:0     pid:2562  tgid:2551  ppi                                                                                                                                                             d:1      task_flags:0x40044c flags:0x00080801
+[ 4550.617897] Call Trace:
+[ 4550.617898]  <TASK>
+[ 4550.617900]  __schedule+0x48b/0x18c0
+[ 4550.617903]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.617905]  ? free_to_pcs_bulk+0x9d/0x670
+[ 4550.617909]  ? rdma_accept+0x80/0x310 [rdma_cm]
+[ 4550.617916]  schedule+0x27/0xf0
+[ 4550.617918]  io_schedule+0x4c/0x80
+[ 4550.617921]  folio_wait_bit_common+0x133/0x310
+[ 4550.617925]  ? __pfx_wake_page_function+0x10/0x10
+[ 4550.617928]  folio_wait_bit+0x18/0x30
+[ 4550.617931]  folio_wait_writeback+0x2b/0xa0
+[ 4550.617934]  __filemap_fdatawait_range+0x8b/0x100
+[ 4550.617941]  filemap_write_and_wait_range+0xa0/0xc0
+[ 4550.617945]  nfs_wb_all+0x27/0x120 [nfs]
+[ 4550.617962]  nfs4_file_flush+0x75/0xc0 [nfsv4]
+[ 4550.617983]  filp_flush+0x70/0xb0
+[ 4550.617986]  filp_close+0x14/0x30
+[ 4550.617988]  put_files_struct.part.0+0x64/0xd0
+[ 4550.617991]  exit_files+0x5b/0x70
+[ 4550.617994]  do_exit+0x741/0xa40
+[ 4550.617997]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618000]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618004]  do_group_exit+0x34/0x90
+[ 4550.618007]  get_signal+0x926/0x950
+[ 4550.618011]  arch_do_signal_or_restart+0x41/0x240
+[ 4550.618016]  exit_to_user_mode_loop+0x93/0x500
+[ 4550.618020]  do_syscall_64+0x2ab/0x500
+[ 4550.618023]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618026]  ? __x64_sys_read+0x19/0x30
+[ 4550.618028]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618031]  ? x64_sys_call+0x2605/0x26b0
+[ 4550.618034]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618036]  ? do_syscall_64+0xbf/0x500
+[ 4550.618039]  ? __remove_hrtimer+0x52/0xb0
+[ 4550.618044]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618046]  ? hrtimer_try_to_cancel.part.0+0x55/0xf0
+[ 4550.618050]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618052]  ? ep_done_scan+0xe4/0x100
+[ 4550.618056]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618058]  ? ep_send_events+0x249/0x2a0
+[ 4550.618063]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618066]  ? do_epoll_wait+0x41a/0x530
+[ 4550.618068]  ? rw_verify_area+0x57/0x190
+[ 4550.618073]  ? __pfx_ep_autoremove_wake_function+0x10/0x10
+[ 4550.618077]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618079]  ? __x64_sys_epoll_wait+0x6e/0x110
+[ 4550.618083]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618086]  ? do_syscall_64+0x2e5/0x500
+[ 4550.618088]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618091]  ? __x64_sys_write+0x19/0x30
+[ 4550.618093]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618095]  ? x64_sys_call+0x79/0x26b0
+[ 4550.618098]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618100]  ? do_syscall_64+0xbf/0x500
+[ 4550.618104]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618106]  ? count_memcg_events+0xf0/0x1c0
+[ 4550.618110]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618113]  ? handle_mm_fault+0xbc/0x300
+[ 4550.618117]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618119]  ? do_user_addr_fault+0x1d2/0x8d0
+[ 4550.618122]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618124]  ? irqentry_exit+0xb2/0x6e0
+[ 4550.618128]  ? srso_alias_return_thunk+0x5/0xfbef5
+[ 4550.618130]  ? exc_page_fault+0x90/0x1b0
+[ 4550.618133]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 4550.618136] RIP: 0033:0x722ed852a072
+[ 4550.618138] RSP: 002b:0000722ed77f6d70 EFLAGS: 00000293 ORIG_RAX: 00000000000                                                                                                                                                             000e8
+[ 4550.618140] RAX: fffffffffffffffc RBX: 0000000000000000 RCX: 0000722ed852a072
+[ 4550.618142] RDX: 0000000000000020 RSI: 00005ca93e8ec1d0 RDI: 000000000000000a
+[ 4550.618143] RBP: 0000722ed77f6d90 R08: 0000000000000000 R09: 0000000000000000
+[ 4550.618145] R10: 00000000001f793e R11: 0000000000000293 R12: 00005ca93e8ec1d0
+[ 4550.618147] R13: 00005ca93e8ec1b0 R14: 00005ca93e8ec1b0 R15: 00005ca93e8ebf10
+[ 4550.618151]  </TASK>
+[ 4550.618153] Future hung task reports are suppressed, see sysctl kernel.hung_t                                                                                                                                                             ask_warnings
+[ 4636.631024] rpc_check_timeout: 5 callbacks suppressed
+[ 4636.631028] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.631089] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.631291] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.631299] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.671318] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.671343] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.671352] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.671361] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.671369] nfs: server 10.10.44.74 not responding, still trying
+[ 4636.671377] nfs: server 10.10.44.74 not responding, still trying
+[ 4637.267737] nvme nvme8: creating 8 I/O queues.
+[ 4638.841767] nvme nvme8: mapped 8/0/0 default/read/poll queues.
+[ 4638.843061] nvme nvme8: new ctrl: NQN "nqn.2026-01.smrc.test.76", addr 10.10.                                                                                                                                                             44.76:4420, hostnqn: nqn.2014-08.org.nvmexpress:uuid:00000000-0000-0000-0000-7cc                                                                                                                                                             255512aeb
+[ 4730.838444] rpc_check_timeout: 5 callbacks suppressed
+[ 4730.838448] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.838507] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.838710] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.838720] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.878916] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.878944] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.878949] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.878959] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.878968] nfs: server 10.10.44.74 not responding, still trying
+[ 4730.878977] nfs: server 10.10.44.74 not responding, still trying
+[ 4787.141657] nvme nvme8: Removing ctrl: NQN "nqn.2026-01.smrc.test.76"
+[ 4798.883702] nvme nvme8: creating 8 I/O queues.
+[ 4800.464895] nvme nvme8: mapped 8/0/0 default/read/poll queues.
+[ 4800.466184] nvme nvme8: new ctrl: NQN "nqn.2026-01.smrc.test.76", addr 10.10.                                                                                                                                                             44.76:4420, hostnqn: nqn.2014-08.org.nvmexpress:uuid:00000000-0000-0000-0000-7cc                                                                                                                                                             255512aeb
+[ 4825.045917] rpc_check_timeout: 5 callbacks suppressed
+[ 4825.045921] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.045984] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.046179] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.046188] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.086522] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.086546] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.086554] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.086561] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.086572] nfs: server 10.10.44.74 not responding, still trying
+[ 4825.086579] nfs: server 10.10.44.74 not responding, still trying
+[ 4919.253341] rpc_check_timeout: 5 callbacks suppressed
+[ 4919.253346] nfs: server 10.10.44.74 not responding, still trying
+[ 4919.253404] nfs: server 10.10.44.74 not responding, still trying
+[ 4919.253619] nfs: server 10.10.44.74 not responding, still trying
+[ 4919.253628] nfs: server 10.10.44.74 not responding, still trying
+[ 4919.294116] nfs: server 10.10.44.74 not responding, still trying
+[ 4919.294150] nfs: server 10.10.44.74 not responding, still trying
+
