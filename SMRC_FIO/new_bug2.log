@@ -1,0 +1,114 @@
+client:
+[177704.336685] RPC:       xs_connect scheduled xprt 0000000092c09698
+[177704.336713] RPC:       xs_bind 0.0.0.0:887: ok (0)
+[177704.336726] RPC:       worker connecting xprt 0000000092c09698 via tcp to 10.10.44.74 (port 2049)
+[177704.336802] RPC:       0000000092c09698 connect status 115 connected 0 sock state 2
+[177704.336905] RPC:       xs_tcp_state_change client 0000000092c09698...
+[177704.336927] RPC:       state 1 conn 0 dead 0 zapped 1 sk_shutdown 0
+[177704.337036] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337068] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337120] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337142] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337180] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337202] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337241] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337269] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337315] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337338] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337375] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337398] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337424] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337460] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337483] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337500] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337534] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337557] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337568] RPC:       xs_tcp_send_request(216) = 0
+[177704.337591] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337604] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337619] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337633] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337649] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337662] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337675] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337687] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337700] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337713] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337743] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337756] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337767] RPC:       xs_tcp_send_request(216) = 0
+[177704.337786] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337800] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337814] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337828] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337841] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337855] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337869] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337882] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337900] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337915] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337929] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337944] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337974] RPC:       xs_tcp_send_request(4292) = 0
+[177704.337985] RPC:       xs_tcp_send_request(216) = 0
+[177704.337997] RPC:       xs_tcp_send_request(216) = 0
+[177704.338011] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338025] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338042] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338055] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338068] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338082] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338093] RPC:       xs_tcp_send_request(216) = 0
+[177704.338106] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338119] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338134] RPC:       xs_tcp_send_request(4292) = 0
+[177704.338141] RPC:       xs_tcp_send_request(2288) = -11
+[177704.378163] RPC:       write space: waking waiting task on xprt 0000000092c09698
+[177704.378183] RPC:       xs_tcp_send_request(2288) = 0
+[177704.378194] RPC:       xs_tcp_send_request(216) = 0
+[177704.378206] RPC:       xs_tcp_send_request(216) = 0
+[177704.378214] RPC:       xs_tcp_send_request(216) = 0
+[177704.378234] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378244] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378255] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378265] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378275] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378284] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378293] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378306] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378314] RPC:       xs_tcp_send_request(216) = 0
+[177704.378328] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378336] RPC:       xs_tcp_send_request(216) = 0
+[177704.378347] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378357] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378367] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378377] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378386] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378396] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378406] RPC:       xs_tcp_send_request(4292) = 0
+[177704.378419] RPC:       xs_tcp_send_request(4292) = 0
+
+mds:
+[147332.376544] svc_age_temp_xprts
+[147341.121522] RPC:       waiting for request slot
+[147350.121514] RPC:       waiting for request slot
+[147359.121464] RPC:       waiting for request slot
+[147368.121413] RPC:       waiting for request slot
+[147377.121381] RPC:       waiting for request slot
+[147386.121342] RPC:       waiting for request slot
+[147395.121301] RPC:       waiting for request slot
+
+
+disable pnfs debug
+client 
+[177897.687287] 50354 c825      0 cc3adf2b 4ea31c57    60641 5d3d12f8 nfsv4 WRITE a:call_status [sunrpc] q:xprt_pending
+[177897.687345] 49750 c825      0 cc3adf2b d2a2ef95    55065 5d3d12f8 nfsv4 WRITE a:call_status [sunrpc] q:xprt_pending
+[177897.687404] 49686 c825      0 cc3adf2b fc58b70d    60642 5d3d12f8 nfsv4 WRITE a:call_status [sunrpc] q:xprt_pending
+[177897.687462] 49825 c825      0 cc3adf2b f5c9ba15    60642 5d3d12f8 nfsv4 WRITE a:call_status [sunrpc] q:xprt_pending
+
+mds
+[147689.781771] -pid- flgs status -client- --rqstp- -timeout ---ops--
+[147689.781773]   165 2281    -11 bd50f8fb 25dccfa6        0 8de4ccb8 nfs4_cbv1 CB_LAYOUT a:call_transmit_status [sunrpc] q:none
+[147689.781807]   166 2281    -11 bd50f8fb c79e377b        0 8de4ccb8 nfs4_cbv1 CB_LAYOUT a:call_transmit_status [sunrpc] q:none
+
+
