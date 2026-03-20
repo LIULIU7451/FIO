@@ -1,0 +1,212 @@
+[69992.353223] pnfs_update_layout: inode 0:53/1032 pNFS layout segment not found for (read/write, offset: 7835361280, length: 4096)
+[69992.353226] NFS: initiated pgio call (req 0:53/1032, 4096 bytes @ offset 7835361280)
+[69992.353231] --> nfs4_alloc_slot used_slots=ffffffffffffffff highest_used=713 max_slots=1024
+[69992.353234] <-- nfs4_alloc_slot used_slots=ffffffffffffffff highest_used=713 slotid=87
+[69992.353238] encode_sequence: sessionid=1773977139:2205975169:1:0 seqid=3304 slotid=87 max_slotid=713 cache_this=0
+[69992.353247] RPC:       xs_tcp_send_request(4292) = 0
+[70001.689061] RPC:       allocate a backchannel request
+[70001.689067] RPC:       backchannel req=00000000e44b134a
+[70001.689071] RPC:       add callback request to list
+[70001.689105] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70001.689126] RPC:       xs_tcp_send_request(84) = 0
+[70001.689152] RPC:       free backchannel req=00000000e44b134a
+[70001.689155] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70010.905063] RPC:       allocate a backchannel request
+[70010.905069] RPC:       backchannel req=00000000e44b134a
+[70010.905073] RPC:       add callback request to list
+[70010.905103] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70010.905124] RPC:       xs_tcp_send_request(84) = 0
+[70010.905150] RPC:       free backchannel req=00000000e44b134a
+[70010.905153] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70020.121109] RPC:       allocate a backchannel request
+[70020.121116] RPC:       backchannel req=00000000e44b134a
+[70020.121120] RPC:       add callback request to list
+[70020.121146] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70020.121168] RPC:       xs_tcp_send_request(84) = 0
+[70020.121198] RPC:       free backchannel req=00000000e44b134a
+[70020.121200] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70029.337130] RPC:       allocate a backchannel request
+[70029.337136] RPC:       backchannel req=00000000e44b134a
+[70029.337140] RPC:       add callback request to list
+[70029.337170] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70029.337189] RPC:       xs_tcp_send_request(84) = 0
+[70029.337216] RPC:       free backchannel req=00000000e44b134a
+[70029.337218] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70036.994152] nfs4_renew_state: start
+[70036.994165] <-- nfs41_proc_async_sequence status=0
+[70036.994170] nfs4_renew_state: done
+[70036.994174] --> nfs4_alloc_slot used_slots=ffffffffffffffff highest_used=713 max_slots=1024
+[70036.994231] <-- nfs4_alloc_slot used_slots=ffffffffffffffff highest_used=714 slotid=714
+[70036.994239] encode_sequence: sessionid=1773977139:2205975169:1:0 seqid=3274 slotid=714 max_slotid=714 cache_this=0
+[70036.994256] RPC:       xs_tcp_send_request(116) = 0
+[70038.553158] RPC:       allocate a backchannel request
+[70038.553163] RPC:       backchannel req=00000000e44b134a
+[70038.553168] RPC:       add callback request to list
+[70038.553192] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70038.553212] RPC:       xs_tcp_send_request(84) = 0
+[70038.553239] RPC:       free backchannel req=00000000e44b134a
+[70038.553241] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70047.769167] RPC:       allocate a backchannel request
+[70047.769173] RPC:       backchannel req=00000000e44b134a
+[70047.769188] RPC:       add callback request to list
+[70047.769219] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70047.769239] RPC:       xs_tcp_send_request(84) = 0
+[70047.769266] RPC:       free backchannel req=00000000e44b134a
+[70047.769269] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70056.985195] RPC:       allocate a backchannel request
+[70056.985201] RPC:       backchannel req=00000000e44b134a
+[70056.985205] RPC:       add callback request to list
+[70056.985247] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70056.985267] RPC:       xs_tcp_send_request(84) = 0
+[70056.985293] RPC:       free backchannel req=00000000e44b134a
+[70056.985295] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70066.201210] RPC:       allocate a backchannel request
+[70066.201216] RPC:       backchannel req=00000000e44b134a
+[70066.201221] RPC:       add callback request to list
+[70066.201274] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70066.201294] RPC:       xs_tcp_send_request(84) = 0
+[70066.201319] RPC:       free backchannel req=00000000e44b134a
+[70066.201321] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70075.417220] RPC:       allocate a backchannel request
+[70075.417226] RPC:       backchannel req=00000000e44b134a
+[70075.417230] RPC:       add callback request to list
+[70075.417260] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70075.417296] RPC:       xs_tcp_send_request(84) = 0
+[70075.417322] RPC:       free backchannel req=00000000e44b134a
+[70075.417325] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70084.633228] RPC:       allocate a backchannel request
+[70084.633234] RPC:       backchannel req=00000000e44b134a
+[70084.633239] RPC:       add callback request to list
+[70084.633269] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70084.633289] RPC:       xs_tcp_send_request(84) = 0
+[70084.633337] RPC:       free backchannel req=00000000e44b134a
+[70084.633339] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70093.849253] RPC:       allocate a backchannel request
+[70093.849259] RPC:       backchannel req=00000000e44b134a
+[70093.849263] RPC:       add callback request to list
+[70093.849292] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70093.849312] RPC:       xs_tcp_send_request(84) = 0
+[70093.849350] RPC:       free backchannel req=00000000e44b134a
+[70093.849352] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70103.065295] RPC:       allocate a backchannel request
+[70103.065301] RPC:       backchannel req=00000000e44b134a
+[70103.065304] RPC:       add callback request to list
+[70103.065336] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70103.065377] RPC:       xs_tcp_send_request(84) = 0
+[70103.065403] RPC:       free backchannel req=00000000e44b134a
+[70103.065406] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70112.281353] RPC:       allocate a backchannel request
+[70112.281360] RPC:       backchannel req=00000000e44b134a
+[70112.281363] RPC:       add callback request to list
+[70112.281429] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70112.281449] RPC:       xs_tcp_send_request(84) = 0
+[70112.281474] RPC:       free backchannel req=00000000e44b134a
+[70112.281476] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70121.497342] RPC:       allocate a backchannel request
+[70121.497348] RPC:       backchannel req=00000000e44b134a
+[70121.497352] RPC:       add callback request to list
+[70121.497384] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70121.497403] RPC:       xs_tcp_send_request(84) = 0
+[70121.497452] RPC:       free backchannel req=00000000e44b134a
+[70121.497455] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70130.713358] RPC:       allocate a backchannel request
+[70130.713364] RPC:       backchannel req=00000000e44b134a
+[70130.713368] RPC:       add callback request to list
+[70130.713399] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70130.713420] RPC:       xs_tcp_send_request(84) = 0
+[70130.713484] RPC:       free backchannel req=00000000e44b134a
+[70130.713487] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70139.929358] RPC:       allocate a backchannel request
+[70139.929364] RPC:       backchannel req=00000000e44b134a
+[70139.929367] RPC:       add callback request to list
+[70139.929400] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70139.929421] RPC:       xs_tcp_send_request(84) = 0
+[70139.929452] RPC:       free backchannel req=00000000e44b134a
+[70139.929455] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70149.145411] RPC:       allocate a backchannel request
+[70149.145417] RPC:       backchannel req=00000000e44b134a
+[70149.145421] RPC:       add callback request to list
+[70149.145452] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70149.145471] RPC:       xs_tcp_send_request(84) = 0
+[70149.145520] RPC:       free backchannel req=00000000e44b134a
+[70149.145524] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70158.361390] RPC:       allocate a backchannel request
+[70158.361396] RPC:       backchannel req=00000000e44b134a
+[70158.361400] RPC:       add callback request to list
+[70158.361431] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70158.361450] RPC:       xs_tcp_send_request(84) = 0
+[70158.361477] RPC:       free backchannel req=00000000e44b134a
+[70158.361479] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70167.577437] RPC:       allocate a backchannel request
+[70167.577443] RPC:       backchannel req=00000000e44b134a
+[70167.577446] RPC:       add callback request to list
+[70167.577478] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70167.577498] RPC:       xs_tcp_send_request(84) = 0
+[70167.577525] RPC:       free backchannel req=00000000e44b134a
+[70167.577527] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70176.258579] nfs: server 10.10.44.74 not responding, still trying
+[70176.258581] nfs: server 10.10.44.74 not responding, still trying
+[70176.258591] nfs: server 10.10.44.74 not responding, still trying
+[70176.258597] nfs: server 10.10.44.74 not responding, still trying
+[70176.258607] nfs: server 10.10.44.74 not responding, still trying
+[70176.258704] nfs: server 10.10.44.74 not responding, still trying
+[70176.258705] nfs: server 10.10.44.74 not responding, still trying
+[70176.258705] nfs: server 10.10.44.74 not responding, still trying
+[70176.258706] nfs: server 10.10.44.74 not responding, still trying
+[70176.258706] nfs: server 10.10.44.74 not responding, still trying
+[70176.793446] RPC:       allocate a backchannel request
+[70176.793452] RPC:       backchannel req=00000000e44b134a
+[70176.793456] RPC:       add callback request to list
+[70176.793489] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70176.793508] RPC:       xs_tcp_send_request(84) = 0
+[70176.793535] RPC:       free backchannel req=00000000e44b134a
+[70176.793537] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70186.009434] RPC:       allocate a backchannel request
+[70186.009439] RPC:       backchannel req=00000000e44b134a
+[70186.009442] RPC:       add callback request to list
+[70186.009474] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70186.009493] RPC:       xs_tcp_send_request(84) = 0
+[70186.009520] RPC:       free backchannel req=00000000e44b134a
+[70186.009523] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70195.225482] RPC:       allocate a backchannel request
+[70195.225488] RPC:       backchannel req=00000000e44b134a
+[70195.225493] RPC:       add callback request to list
+[70195.225523] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70195.225542] RPC:       xs_tcp_send_request(84) = 0
+[70195.225569] RPC:       free backchannel req=00000000e44b134a
+[70195.225571] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70204.441487] RPC:       allocate a backchannel request
+[70204.441493] RPC:       backchannel req=00000000e44b134a
+[70204.441497] RPC:       add callback request to list
+[70204.441529] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70204.441548] RPC:       xs_tcp_send_request(84) = 0
+[70204.441576] RPC:       free backchannel req=00000000e44b134a
+[70204.441578] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70213.657539] RPC:       allocate a backchannel request
+[70213.657545] RPC:       backchannel req=00000000e44b134a
+[70213.657550] RPC:       add callback request to list
+[70213.657568] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70213.657587] RPC:       xs_tcp_send_request(84) = 0
+[70213.657612] RPC:       free backchannel req=00000000e44b134a
+[70213.657614] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70222.873514] RPC:       allocate a backchannel request
+[70222.873519] RPC:       backchannel req=00000000e44b134a
+[70222.873524] RPC:       add callback request to list
+[70222.873555] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70222.873574] RPC:       xs_tcp_send_request(84) = 0
+[70222.873601] RPC:       free backchannel req=00000000e44b134a
+[70222.873604] RPC: rpc_run_bc_task: task= 00000000b96879af
+[70232.089539] RPC:       allocate a backchannel request
+[70232.089545] RPC:       backchannel req=00000000e44b134a
+[70232.089549] RPC:       add callback request to list
+[70232.089578] RPC: rpc_run_bc_task req= 00000000e44b134a
+[70232.089597] RPC:       xs_tcp_send_request(84) = 0
+[70232.089624] RPC:       free backchannel req=00000000e44b134a
+
+
+mds
+
+[70397.486997] __find_in_sessionid_hashtbl: 1773977139:2205975169:1:0
+[70397.487000] nfsd4_sequence: slotid 190
+[70491.814948] svc_age_temp_xprts
+
